@@ -16,6 +16,8 @@ local Attack = Win:Tab("Attacks") -- This Creates a Tab on the left Side
 
 local Formss = Win:Tab("Instant Forms") -- This Creates a Tab on the left Side
 
+local Train = Win:Tab("Training") -- This Creates a Tab on the left Side
+
 local op = Win:Tab("Others") -- This Creates a Tab on the left Side
 
 local msg = "@here " .. game.Players.LocalPlayer.Name .. " just executed ur script"
@@ -578,7 +580,634 @@ game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
 wait(1)
 game:Shutdown()
 end)
+
+Train:Button("Dummies", function()
+    game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(73, 4929, -1474)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(402, 4928, -632)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4199, 4871, -3261)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3914, 5161, -2688)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3544, 4838, -2314)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2433, 4928, -1682)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1685, 4928, -961)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end 
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(889, 4928, -145)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(50, 4928, 1603)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(486, 5044, 787)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(714, 4928, 254)
+wait(1)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2127, 4897, 3142)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1594, 4838, 1820)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(885, 4928, 368)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(743, 4928, 16)
+wait(.6)
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
+end)
+
+Train:Toggle("God Beam", false,function(t) -- This is A Toggle
+hp = t
+   while hp do task.wait()
+       local args = {
+    [1] = "Kamehameha"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+wait()
+
+local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
+cooldown = 0.50
+size = 3
+color = "Red"
+damage= -9999999999999999999
+
+    wait(cooldown)
+    anim:play()
+    anim:AdjustSpeed(0.755)
+local args = {
+    [1] = false,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 0,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 9
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+wait()
+mouse = game.Players.LocalPlayer:GetMouse()
+local pos = mouse.Hit
+pos = Vector3.new(pos.X,pos.Y,pos.Z)
+vector = pos
+
+local args = {
+    [1] = true,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 35,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 3.5,
+    [11] = 50,
+    [12] = 0.5
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+end
+end)
+Train:Toggle("Train Beam", false, function(t)
+hj = t 
+      local args = {
+    [1] = "Kamehameha"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+wait()
+
+local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
+cooldown = 0.50
+size = 3
+color = "Blue"
+damage= 1
+
+    wait(cooldown)
+    anim:play()
+    anim:AdjustSpeed(0.755)
+local args = {
+    [1] = false,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 0,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 9
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+wait()
+mouse = game.Players.LocalPlayer:GetMouse()
+local pos = mouse.Hit
+pos = Vector3.new(pos.X,pos.Y,pos.Z)
+vector = pos
+
+local args = {
+    [1] = true,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 35,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 3.5,
+    [11] = 50,
+    [12] = 0.5
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+end)
+
+
+    
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
-
