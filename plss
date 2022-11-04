@@ -510,10 +510,62 @@ tp:Button("Super strong", function()
   game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1707, 4877, 4251)
 end)
 
+op:Button("Crash", function()
+  local args = {
+    [1] = "Kamehameha"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+wait(1)
+
+local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
+cooldown = 0.99999999
+size = -9999999999999999999999999
+color = "Red"
+damage=10
+
+    wait(cooldown)
+    anim:play()
+    anim:AdjustSpeed(0.755)
+local args = {
+    [1] = false,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 0,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 9
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+wait()
+mouse = game.Players.LocalPlayer:GetMouse()
+local pos = mouse.Hit
+pos = Vector3.new(pos.X,pos.Y,pos.Z)
+vector = pos
+
+local args = {
+    [1] = true,
+    [2] = "Kamehameha",
+    [3] = color,
+    [4] = 4,
+    [5] = vector,
+    [6] = damage,
+    [7] = 35,
+    [8] = game:GetService("Players").LocalPlayer.Backpack.Kamehameha,
+    [9] = size,
+    [10] = 3.5,
+    [11] = 50,
+    [12] = 0.5
+}
+
+game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
 
 
-
-
+end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
