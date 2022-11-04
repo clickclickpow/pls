@@ -475,6 +475,14 @@ Slides:Slider("Rebirths visual", 1, 9999999, 20000, function(v) -- 1st is String
 game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value = v
 end)
 
+Slides:Slider("Ki visual", 1, 9999999, 20000, function(v) -- 1st is String | 2nd is min | 3rd is max | 4th is start whew
+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Ki.Value = v
+end)
+
+Slides:Slider("Strength visual", 1, 9999999, 20000, function(v) -- 1st is String | 2nd is min | 3rd is max | 4th is start whew
+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value = v
+end)
+
 tp:Button("Grandpriest", function()
   game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(917, 5521, 4050)
 end)
