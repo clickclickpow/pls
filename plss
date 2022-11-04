@@ -1104,7 +1104,7 @@ game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
 wait()
 
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
-cooldown = 0.50
+cooldown = 0.80
 size = 3
 color = "Red"
 damage= -9999999999999999999
@@ -1160,7 +1160,7 @@ game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
 wait()
 
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
-cooldown = 0.50
+cooldown = 0.80
 size = 3
 color = "Blue"
 damage= 1
