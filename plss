@@ -76,7 +76,7 @@ if game.Players.LocalPlayer.Character.Humanoid.Health > 10 then
 hi:Play()
 end
   wait(4)
-  local PlaceId = 920587237
+  local PlaceId = 5373028495
 game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
 end)
 
