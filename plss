@@ -75,7 +75,7 @@ hi.Parent = game.Workspace
 if game.Players.LocalPlayer.Character.Humanoid.Health > 10 then
 hi:Play()
 end
-  wait(4)
+  wait(2)
   local PlaceId = 5373028495
 game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
 end)
@@ -130,7 +130,7 @@ hv = t
 }
 
 game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
-wait()
+wait(0.5)
 local ye   = game.Players.LocalPlayer:GetMouse()
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Super Spirit Bomb"].LocalScript.Animation)
 anim:play()
@@ -215,7 +215,7 @@ hj = t
 }
 
 game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
-wait()
+wait(0.5)
 local ye   = game.Players.LocalPlayer:GetMouse()
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Stardust Breaker"].LocalScript.Animation)
 anim:play()
