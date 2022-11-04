@@ -564,7 +564,7 @@ local args = {
 
 game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
 wait(1)
-game:GetService("Players").LocalPlayer:kick(Grah)
+game:Shutdown()
 end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
