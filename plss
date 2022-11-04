@@ -471,6 +471,9 @@ end)
 Slides:Slider("Ultra Speed", 1, 9999999, 20000, function(v) -- 1st is String | 2nd is min | 3rd is max | 4th is start whew
 game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Speed.Value = v
 end)
+Slides:Slider("Rebirths visual", 1, 9999999, 20000, function(v) -- 1st is String | 2nd is min | 3rd is max | 4th is start whew
+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value = v
+end)
 
 tp:Button("Grandpriest", function()
   game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(917, 5521, 4050)
