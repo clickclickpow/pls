@@ -1152,6 +1152,7 @@ end
 end)
 Train:Toggle("Train Beam", false, function(t)
 hj = t 
+     while hp do task.wait()
       local args = {
     [1] = "Kamehameha"
 }
@@ -1204,8 +1205,8 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
+end
 end)
-
 
     
 Autofarm:Label("Hello") -- This is just for information or Text ;)
