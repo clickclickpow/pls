@@ -1219,6 +1219,604 @@ game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
 end
 end)
 
+Buttons:Button("Scouter", function() -- This is A Button
+    
+	local ScouterBest = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local List = Instance.new("Frame")
+	local PlrList = Instance.new("ScrollingFrame")
+	local UIGridLayout = Instance.new("UIGridLayout")
+	local Reload = Instance.new("TextButton")
+	local PlrName = Instance.new("TextLabel")
+	local BaseStats = Instance.new("TextLabel")
+	local Strength = Instance.new("TextLabel")
+	local Speed = Instance.new("TextLabel")
+	local Ki = Instance.new("TextLabel")
+	local Rebirth = Instance.new("TextLabel")
+	local PLlvl = Instance.new("TextLabel")
+	local FuseStatsShow = Instance.new("TextLabel")
+	local Strength_2 = Instance.new("TextLabel")
+	local Speed_2 = Instance.new("TextLabel")
+	local Ki_2 = Instance.new("TextLabel")
+	local Rebirth_2 = Instance.new("TextLabel")
+	local PowerLevel = Instance.new("TextLabel")
+	local Backpackname = Instance.new("TextLabel")
+	local FusePlrList = Instance.new("ScrollingFrame")
+	local UIGridLayout_2 = Instance.new("UIGridLayout")
+	local WhoFusedWith = Instance.new("TextLabel")
+	local Backpack = Instance.new("ScrollingFrame")
+	local UIGridLayout_3 = Instance.new("UIGridLayout")
+	local SSS = Instance.new("TextLabel")
+	local OpenClose = Instance.new("TextButton")
+	warn("\109\97\100\101\32\98\121\32\122\122\111\116\97\99\32\110\111\116\32\101\118\101\110\32\115\116\111\108\101\110")
+	
+	--Properties:
+	ScouterBest.Name = "ScouterBest"
+	ScouterBest.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	ScouterBest.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Main.Name = "Main"
+	Main.Parent = ScouterBest
+	Main.BackgroundColor3 = Color3.new(1, 1, 0)
+	Main.BackgroundTransparency = 0.5
+	Main.BorderColor3 = Color3.new(1, 1, 0)
+	Main.BorderSizePixel = 0
+	Main.Position = UDim2.new(0.112000003, 0, 0.136999995, 0)
+	Main.Size = UDim2.new(0.841535449, 0, 0.77177912, 0)
+	Main.Visible = false
+	
+	List.Name = "List"
+	List.Parent = Main
+	List.BackgroundColor3 = Color3.new(1, 1, 0)
+	List.BackgroundTransparency = 0.5
+	List.BorderColor3 = Color3.new(1, 1, 0)
+	List.BorderSizePixel = 0
+	List.Position = UDim2.new(-0.13333334, 0, 0.0985691547, 0)
+	List.Size = UDim2.new(0.13333334, 0, 0.790143073, 0)
+	
+	PlrList.Name = "PlrList"
+	PlrList.Parent = List
+	PlrList.BackgroundColor3 = Color3.new(1, 1, 1)
+	PlrList.BackgroundTransparency = 1
+	PlrList.Position = UDim2.new(0, 0, 0.0744466782, 0)
+	PlrList.Size = UDim2.new(1, 0, 0.925553322, 0)
+	
+	UIGridLayout.Parent = PlrList
+	UIGridLayout.CellPadding = UDim2.new(0, 0, 0, 5)
+	UIGridLayout.CellSize = UDim2.new(0.920000017, 0, 0.0399999991, 0)
+	
+	Reload.Name = "Reload"
+	Reload.Parent = List
+	Reload.BackgroundColor3 = Color3.new(1, 1, 0)
+	Reload.BackgroundTransparency = 0.69999998807907
+	Reload.BorderSizePixel = 0
+	Reload.Position = UDim2.new(-0.000883483852, 0, -2.2412305e-05, 0)
+	Reload.Size = UDim2.new(1.00088346, 0, 0.0754895061, 0)
+	Reload.Font = Enum.Font.SourceSans
+	Reload.Text = "Reload"
+	Reload.TextColor3 = Color3.new(0, 0, 0)
+	Reload.TextScaled = true
+	Reload.TextSize = 14
+	Reload.TextWrapped = true
+	
+	PlrName.Name = " PlrName"
+	PlrName.Parent = Main
+	PlrName.BackgroundColor3 = Color3.new(1, 1, 1)
+	PlrName.BackgroundTransparency = 1
+	PlrName.Size = UDim2.new(1, 0, 0.0826532096, 0)
+	PlrName.Font = Enum.Font.SourceSans
+	PlrName.Text = "PlrName"
+	PlrName.TextColor3 = Color3.new(0, 0, 0)
+	PlrName.TextScaled = true
+	PlrName.TextSize = 14
+	PlrName.TextWrapped = true
+	
+	BaseStats.Name = "Base Stats"
+	BaseStats.Parent = Main
+	BaseStats.BackgroundColor3 = Color3.new(1, 1, 1)
+	BaseStats.BackgroundTransparency = 1
+	BaseStats.Position = UDim2.new(0, 0, 0.0985691547, 0)
+	BaseStats.Size = UDim2.new(0.301106632, 0, 0.0826532096, 0)
+	BaseStats.Font = Enum.Font.SourceSans
+	BaseStats.Text = "Base Stats"
+	BaseStats.TextColor3 = Color3.new(0, 0, 0)
+	BaseStats.TextScaled = true
+	BaseStats.TextSize = 14
+	BaseStats.TextWrapped = true
+	
+	Strength.Name = "Strength"
+	Strength.Parent = BaseStats
+	Strength.BackgroundColor3 = Color3.new(1, 1, 1)
+	Strength.BackgroundTransparency = 1
+	Strength.Position = UDim2.new(0.0307835881, 0, 0.980979204, 0)
+	Strength.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Strength.Font = Enum.Font.SourceSans
+	Strength.Text = "Strength:"
+	Strength.TextColor3 = Color3.new(1, 0, 0)
+	Strength.TextScaled = true
+	Strength.TextSize = 14
+	Strength.TextWrapped = true
+	Strength.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Speed.Name = "Speed"
+	Speed.Parent = BaseStats
+	Speed.BackgroundColor3 = Color3.new(1, 1, 1)
+	Speed.BackgroundTransparency = 1
+	Speed.Position = UDim2.new(0.0307835881, 0, 1.96195841, 0)
+	Speed.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Speed.Font = Enum.Font.SourceSans
+	Speed.Text = "Speed:"
+	Speed.TextColor3 = Color3.new(0, 1, 0.498039)
+	Speed.TextScaled = true
+	Speed.TextSize = 14
+	Speed.TextWrapped = true
+	Speed.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Ki.Name = "Ki"
+	Ki.Parent = BaseStats
+	Ki.BackgroundColor3 = Color3.new(1, 1, 1)
+	Ki.BackgroundTransparency = 1
+	Ki.Position = UDim2.new(0.0307835881, 0, 2.94293761, 0)
+	Ki.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Ki.Font = Enum.Font.SourceSans
+	Ki.Text = "Ki:"
+	Ki.TextColor3 = Color3.new(0, 1, 1)
+	Ki.TextScaled = true
+	Ki.TextSize = 14
+	Ki.TextWrapped = true
+	Ki.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Rebirth.Name = "Rebirth"
+	Rebirth.Parent = BaseStats
+	Rebirth.BackgroundColor3 = Color3.new(1, 1, 1)
+	Rebirth.BackgroundTransparency = 1
+	Rebirth.Position = UDim2.new(0.0307835881, 0, 3.92391682, 0)
+	Rebirth.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Rebirth.Font = Enum.Font.SourceSans
+	Rebirth.Text = "Rebirth:"
+	Rebirth.TextColor3 = Color3.new(1, 1, 0)
+	Rebirth.TextScaled = true
+	Rebirth.TextSize = 14
+	Rebirth.TextWrapped = true
+	Rebirth.TextXAlignment = Enum.TextXAlignment.Left
+	
+	PLlvl.Name = "PLlvl"
+	PLlvl.Parent = BaseStats
+	PLlvl.BackgroundColor3 = Color3.new(1, 1, 1)
+	PLlvl.BackgroundTransparency = 1
+	PLlvl.Position = UDim2.new(1.37248135, 0, 8.55952454, 0)
+	PLlvl.Size = UDim2.new(1.94860148, 0, 1, 0)
+	PLlvl.Font = Enum.Font.SourceSans
+	PLlvl.Text = "Base Power Level:"
+	PLlvl.TextColor3 = Color3.new(0.666667, 1, 1)
+	PLlvl.TextScaled = true
+	PLlvl.TextSize = 14
+	PLlvl.TextWrapped = true
+	PLlvl.TextXAlignment = Enum.TextXAlignment.Left
+	
+	FuseStatsShow.Name = "Fuse Stats Show"
+	FuseStatsShow.Parent = Main
+	FuseStatsShow.BackgroundColor3 = Color3.new(1, 1, 1)
+	FuseStatsShow.BackgroundTransparency = 1
+	FuseStatsShow.Position = UDim2.new(-0.00648838282, 0, 0.542130351, 0)
+	FuseStatsShow.Size = UDim2.new(0.301106632, 0, 0.0826532096, 0)
+	FuseStatsShow.Font = Enum.Font.SourceSans
+	FuseStatsShow.Text = "Fusion Stats Show"
+	FuseStatsShow.TextColor3 = Color3.new(0, 0, 0)
+	FuseStatsShow.TextScaled = true
+	FuseStatsShow.TextSize = 14
+	FuseStatsShow.TextWrapped = true
+	
+	Strength_2.Name = "Strength"
+	Strength_2.Parent = FuseStatsShow
+	Strength_2.BackgroundColor3 = Color3.new(1, 1, 1)
+	Strength_2.BackgroundTransparency = 1
+	Strength_2.Position = UDim2.new(0.0307835881, 0, 0.980979204, 0)
+	Strength_2.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Strength_2.Font = Enum.Font.SourceSans
+	Strength_2.Text = "Strength:"
+	Strength_2.TextColor3 = Color3.new(1, 0, 0)
+	Strength_2.TextScaled = true
+	Strength_2.TextSize = 14
+	Strength_2.TextWrapped = true
+	Strength_2.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Speed_2.Name = "Speed"
+	Speed_2.Parent = FuseStatsShow
+	Speed_2.BackgroundColor3 = Color3.new(1, 1, 1)
+	Speed_2.BackgroundTransparency = 1
+	Speed_2.Position = UDim2.new(0.0307835881, 0, 1.96195841, 0)
+	Speed_2.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Speed_2.Font = Enum.Font.SourceSans
+	Speed_2.Text = "Speed:"
+	Speed_2.TextColor3 = Color3.new(0, 1, 0.498039)
+	Speed_2.TextScaled = true
+	Speed_2.TextSize = 14
+	Speed_2.TextWrapped = true
+	Speed_2.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Ki_2.Name = "Ki"
+	Ki_2.Parent = FuseStatsShow
+	Ki_2.BackgroundColor3 = Color3.new(1, 1, 1)
+	Ki_2.BackgroundTransparency = 1
+	Ki_2.Position = UDim2.new(0.0307835881, 0, 2.94293761, 0)
+	Ki_2.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Ki_2.Font = Enum.Font.SourceSans
+	Ki_2.Text = "Ki:"
+	Ki_2.TextColor3 = Color3.new(0, 1, 1)
+	Ki_2.TextScaled = true
+	Ki_2.TextSize = 14
+	Ki_2.TextWrapped = true
+	Ki_2.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Rebirth_2.Name = "Rebirth"
+	Rebirth_2.Parent = FuseStatsShow
+	Rebirth_2.BackgroundColor3 = Color3.new(1, 1, 1)
+	Rebirth_2.BackgroundTransparency = 1
+	Rebirth_2.Position = UDim2.new(0.0307835881, 0, 3.92391682, 0)
+	Rebirth_2.Size = UDim2.new(0.969216406, 0, 1, 0)
+	Rebirth_2.Font = Enum.Font.SourceSans
+	Rebirth_2.Text = "Rebirth:"
+	Rebirth_2.TextColor3 = Color3.new(1, 1, 0)
+	Rebirth_2.TextScaled = true
+	Rebirth_2.TextSize = 14
+	Rebirth_2.TextWrapped = true
+	Rebirth_2.TextXAlignment = Enum.TextXAlignment.Left
+	
+	PowerLevel.Name = "PowerLevel"
+	PowerLevel.Parent = FuseStatsShow
+	PowerLevel.BackgroundColor3 = Color3.new(1, 1, 1)
+	PowerLevel.BackgroundTransparency = 1
+	PowerLevel.Position = UDim2.new(1.39183033, 0, 4.53943348, 0)
+	PowerLevel.Size = UDim2.new(1.94860148, 0, 1, 0)
+	PowerLevel.Font = Enum.Font.SourceSans
+	PowerLevel.Text = "Fuse Power Level:"
+	PowerLevel.TextColor3 = Color3.new(0.85098, 0.458824, 0.831373)
+	PowerLevel.TextScaled = true
+	PowerLevel.TextSize = 14
+	PowerLevel.TextWrapped = true
+	PowerLevel.TextXAlignment = Enum.TextXAlignment.Left
+	
+	Backpackname.Name = "Backpackname"
+	Backpackname.Parent = Main
+	Backpackname.BackgroundColor3 = Color3.new(1, 1, 1)
+	Backpackname.BackgroundTransparency = 1
+	Backpackname.Position = UDim2.new(0.610696018, 0, 0.096979335, 0)
+	Backpackname.Size = UDim2.new(0, 419, 0, 50)
+	Backpackname.Font = Enum.Font.SourceSans
+	Backpackname.Text = "Backpack"
+	Backpackname.TextColor3 = Color3.new(0, 0, 0)
+	Backpackname.TextScaled = true
+	Backpackname.TextSize = 14
+	Backpackname.TextWrapped = true
+	
+	FusePlrList.Name = "FusePlrList"
+	FusePlrList.Parent = Main
+	FusePlrList.BackgroundColor3 = Color3.new(1, 1, 1)
+	FusePlrList.BackgroundTransparency = 1
+	FusePlrList.Position = UDim2.new(0.301106632, 0, 0.572337031, 0)
+	FusePlrList.Size = UDim2.new(0.110034019, 0, 0.427149534, 0)
+	
+	UIGridLayout_2.Parent = FusePlrList
+	UIGridLayout_2.CellPadding = UDim2.new(0, 0, 0, 5)
+	UIGridLayout_2.CellSize = UDim2.new(0.920000017, 0, 0.0399999991, 0)
+	
+	WhoFusedWith.Name = "WhoFusedWith"
+	WhoFusedWith.Parent = Main
+	WhoFusedWith.BackgroundColor3 = Color3.new(0.737255, 0.737255, 0)
+	WhoFusedWith.BackgroundTransparency = 0.5
+	WhoFusedWith.BorderSizePixel = 0
+	WhoFusedWith.Position = UDim2.new(0.301106632, 0, 0.516693234, 0)
+	WhoFusedWith.Size = UDim2.new(0.11215663, 0, 0.0572337061, 0)
+	WhoFusedWith.Font = Enum.Font.SourceSans
+	WhoFusedWith.Text = "Who Fused With"
+	WhoFusedWith.TextColor3 = Color3.new(0, 0, 0)
+	WhoFusedWith.TextScaled = true
+	WhoFusedWith.TextSize = 14
+	WhoFusedWith.TextWrapped = true
+	
+	Backpack.Name = "Backpack"
+	Backpack.Parent = Main
+	Backpack.BackgroundColor3 = Color3.new(1, 1, 1)
+	Backpack.BackgroundTransparency = 1
+	Backpack.Position = UDim2.new(0.610696018, 0, 0.201654196, 0)
+	Backpack.Size = UDim2.new(0, 380, 0, 316)
+	
+	UIGridLayout_3.Parent = Backpack
+	UIGridLayout_3.CellSize = UDim2.new(0.949999988, 0, 0.0399999991, 0)
+	
+	SSS.Name = "SSS"
+	SSS.Parent = Main
+	SSS.BackgroundColor3 = Color3.new(1, 1, 1)
+	SSS.BackgroundTransparency = 1
+	SSS.Position = UDim2.new(0.815285563, 0, 0.00158982514, 0)
+	SSS.Size = UDim2.new(0, 200, 0, 25)
+	SSS.Font = Enum.Font.SourceSans
+	SSS.Text = "made by zzotac not even stolen"
+	SSS.TextColor3 = Color3.new(0, 0, 0)
+	SSS.TextScaled = true
+	SSS.TextSize = 14
+	SSS.TextWrapped = true
+	
+	OpenClose.Name = "OpenClose"
+	OpenClose.Parent = ScouterBest
+	OpenClose.BackgroundColor3 = Color3.new(1, 1, 1)
+	OpenClose.Position = UDim2.new(0.953535497, 0, 0.52638036, 0)
+	OpenClose.Size = UDim2.new(0.0464644954, 0, 0.0429447852, 0)
+	OpenClose.Font = Enum.Font.SourceSans
+	OpenClose.Text = "Show/Hide"
+	OpenClose.TextColor3 = Color3.new(0, 0, 0)
+	OpenClose.TextSize = 14
+	OpenClose.MouseButton1Click:connect(function()
+		Main.Visible = not Main.Visible
+	end)
+	function SCRIPT_DVAZ71_FAKESCRIPT() -- Reload.LocalScript 
+		local script = Instance.new('LocalScript')
+		script.Parent = Reload
+		script.Parent.MouseButton1Click:Connect(function()
+			for _,x in pairs(script.Parent.Parent.PlrList:GetChildren()) do
+				x:remove()
+				wait()
+				local uigridlayout = Instance.new("UIGridLayout")
+				uigridlayout.CellSize = UDim2.new(0.92, 0, 0.04, 0)
+				uigridlayout.CellPadding = UDim2.new(0, 0, 0, 5)
+				uigridlayout.Parent = script.Parent.Parent.PlrList
+				
+				local stats34 = script.Parent.Parent.Parent["Base Stats"]
+				stats34.Strength.Text = "Strength: "
+				stats34.Speed.Text  = "Speed: "
+				stats34.Ki.Text  = "Ki: "
+				stats34.Rebirth.Text  = "Rebirth: "
+				stats34.PLlvl.Text  = "Base Power Level: "
+				
+				local Fusestats34 = script.Parent.Parent.Parent["Base Stats"]
+				Fusestats34.Strength.Text = "Strength: "
+				Fusestats34.Speed.Text  = "Speed: "
+				Fusestats34.Ki.Text  = "Ki: "
+				Fusestats34.Rebirth.Text  = "Rebirth: "
+				Fusestats34.PLlvl.Text  = "Fusion Power Level: "		
+			end	
+		end)
+		
+		script.Parent.MouseButton1Click:Connect(function()
+			wait()
+			for _,n in pairs(game.Players:GetChildren()) do
+				local datas = game.ReplicatedStorage.Datas[n.Name]
+				local textler = script.Parent.Parent.Parent["Base Stats"]	
+				local TextButton = Instance.new("TextButton")
+				TextButton.Parent = script.Parent.Parent.PlrList
+				TextButton.BackgroundColor3 = Color3.new(0.792157, 0.792157, 0)
+				TextButton.Size = UDim2.new(0, 200, 0, 50)
+				TextButton.Font = Enum.Font.SourceSans
+				TextButton.TextColor3 = Color3.new(1, 1, 0)
+				TextButton.TextScaled = true
+				TextButton.TextSize = 14
+				TextButton.TextWrapped = true
+				TextButton.Name = n.Name
+				TextButton.Text = n.Name
+				TextButton.MouseButton1Click:connect(function()
+					textler.Strength.Text = "Strength: "..datas.Strength.Value
+					local fusestats2 = script.Parent.Parent.Parent["Fuse Stats Show"]
+					fusestats2.Strength.Text = "Strength: "
+					fusestats2.Speed.Text = "Speed: "
+					fusestats2.Ki.Text = "Ki: "
+					fusestats2.Rebirth.Text = "Rebirth: "
+					fusestats2.PowerLevel.Text = "Fusion Power Level: "
+					
+					local uigridlayout = Instance.new("UIGridLayout")
+					uigridlayout.CellSize = UDim2.new(0.95, 0, 0.04, 0)
+					uigridlayout.Parent = script.Parent.Parent.Parent.Backpack
+					
+					for _,z in pairs(game.Players[n.Name].Backpack:GetChildren()) do
+						local TextButton2 = Instance.new("TextButton")
+						TextButton2.Parent = script.Parent.Parent.Parent.Backpack
+						TextButton2.BackgroundColor3 = Color3.new(0.921569, 0.921569, 0)
+						TextButton2.Size = UDim2.new(0, 200, 0, 50)
+						TextButton2.Font = Enum.Font.SourceSans
+						TextButton2.Text = z.Name
+						TextButton2.TextColor3 = Color3.new(0, 0, 0)
+						TextButton2.TextScaled = true
+						TextButton2.TextSize = 14
+						TextButton2.TextWrapped = true
+						TextButton2.Text = z.Name
+						if TextButton2.Text == "Combat" then
+							TextButton2:remove()
+						end
+					end
+					wait()
+					for _,t in pairs(script.Parent.Parent.Parent.Backpack:GetChildren()) do
+						t:remove()
+					end
+					wait()
+					local uigridlayout = Instance.new("UIGridLayout")
+					uigridlayout.CellSize = UDim2.new(0.95, 0, 0.04, 0)
+					uigridlayout.Parent = script.Parent.Parent.Parent.Backpack
+					
+					for _,o in pairs(game.Players[n.Name].Backpack:GetChildren()) do
+						local TextButton3 = Instance.new("TextButton")
+						TextButton3.Parent = script.Parent.Parent.Parent.Backpack
+						TextButton3.BackgroundColor3 = Color3.new(0.921569, 0.921569, 0)
+						TextButton3.Size = UDim2.new(0, 200, 0, 50)
+						TextButton3.Font = Enum.Font.SourceSans
+						TextButton3.Text = o.Name
+						TextButton3.TextColor3 = Color3.new(0, 0, 0)
+						TextButton3.TextScaled = true
+						TextButton3.TextSize = 14
+						TextButton3.TextWrapped = true
+						TextButton3.Text = o.Name
+						if TextButton3.Text == "Combat" then
+							TextButton3:remove()
+						end
+					end	
+					textler.Strength.Text = "Strength: "..datas.Strength.Value
+					textler.Speed.Text = "Speed: "..datas.Speed.Value
+					textler.Ki.Text = "Ki: "..datas.Ki.Value
+					textler.Rebirth.Text = "Rebirth: "..datas.Rebirth.Value
+					textler.PLlvl.Text = "Base Power Level: "..(datas.Strength.Value*datas.Rebirth.Value/10) + datas.Strength.Value
+					script.Parent.Parent.Parent[" PlrName"].Text = n.Name
+					
+					for _,u in pairs(script.Parent.Parent.Parent.FusePlrList:GetChildren()) do
+						u:Remove()
+					end
+					wait()
+					
+					local uigridlayout = Instance.new("UIGridLayout")
+					uigridlayout.CellSize = UDim2.new(0.92, 0, 0.04, 0)
+					uigridlayout.CellPadding = UDim2.new(0, 0, 0, 5)
+					uigridlayout.Parent = script.Parent.Parent.Parent.FusePlrList
+					
+					for _,j in pairs(game.Players:GetChildren())do
+						local datas1 = game.ReplicatedStorage.Datas
+						local datas = datas1
+						local TextButton1 = Instance.new("TextButton")	
+						local FuseStats = script.Parent.Parent.Parent["Fuse Stats Show"]
+						TextButton1.Parent = script.Parent.Parent.Parent.FusePlrList
+						TextButton1.BackgroundColor3 = Color3.new(0.792157, 0.792157, 0)
+						TextButton1.Size = UDim2.new(0, 200, 0, 50)
+						TextButton1.Font = Enum.Font.SourceSans
+						TextButton1.TextColor3 = Color3.new(1, 1, 0)
+						TextButton1.TextScaled = true
+						TextButton1.TextSize = 14
+						TextButton1.TextWrapped = true
+						TextButton1.Name = j.Name
+						TextButton1.Text = j.Name
+						if TextButton1.Text == script.Parent.Parent.Parent[" PlrName"].Text then
+							TextButton1:remove()
+						end
+						TextButton1.MouseButton1Click:connect(function()
+							FuseStats.Strength.Text = "Strength: "..datas[script.Parent.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value
+							FuseStats.Speed.Text = "Speed: "..datas[script.Parent.Parent.Parent[" PlrName"].Text].Speed.Value + datas[j.Name].Speed.Value
+							FuseStats.Ki.Text = "Ki: "..datas[script.Parent.Parent.Parent[" PlrName"].Text].Ki.Value + datas[j.Name].Ki.Value
+							FuseStats.Rebirth.Text = "Rebirth: "..datas[script.Parent.Parent.Parent[" PlrName"].Text].Rebirth.Value + datas[j.Name].Rebirth.Value
+							FuseStats.PowerLevel.Text = "Fusion Power Level: "..tostring((datas[script.Parent.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value)*(datas[script.Parent.Parent.Parent[" PlrName"].Text].Rebirth.Value/10 + datas[j.Name].Rebirth.Value/10)+(datas[script.Parent.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value))
+						end)
+					end
+				end)
+			end
+		end)
+		
+	end
+	coroutine.resume(coroutine.create(SCRIPT_DVAZ71_FAKESCRIPT))
+	function SCRIPT_UUOU84_FAKESCRIPT() -- List.LocalScript 
+		local script = Instance.new('LocalScript')
+		script.Parent = List
+		for _,c in pairs(game.Players:GetChildren())do
+			local datas = game.ReplicatedStorage.Datas[c.Name]
+			local textler = script.Parent.Parent["Base Stats"]	
+			local TextButton = Instance.new("TextButton")
+			TextButton.Parent = script.Parent.PlrList
+			TextButton.BackgroundColor3 = Color3.new(0.792157, 0.792157, 0)
+			TextButton.Size = UDim2.new(0, 200, 0, 50)
+			TextButton.Font = Enum.Font.SourceSans
+			TextButton.TextColor3 = Color3.new(1, 1, 0)
+			TextButton.TextScaled = true
+			TextButton.TextSize = 14
+			TextButton.TextWrapped = true
+			TextButton.Name = c.Name
+			TextButton.Text = c.Name
+			TextButton.MouseButton1Click:connect(function()
+				local fusestats2 = script.Parent.Parent["Fuse Stats Show"]
+				fusestats2.Strength.Text = "Strength: "
+				fusestats2.Speed.Text = "Speed: "
+				fusestats2.Ki.Text = "Ki: "
+				fusestats2.Rebirth.Text = "Rebirth: "
+				fusestats2.PowerLevel.Text = "Fusion Power Level: "
+				
+				local uigridlayout = Instance.new("UIGridLayout")
+				uigridlayout.CellSize = UDim2.new(0.95, 0, 0.04, 0)
+				uigridlayout.Parent = script.Parent.Parent.Backpack
+				
+				for _,z in pairs(game.Players[c.Name].Backpack:GetChildren()) do
+					local TextButton2 = Instance.new("TextButton")
+					TextButton2.Parent = script.Parent.Parent.Backpack
+					TextButton2.BackgroundColor3 = Color3.new(0.921569, 0.921569, 0)
+					TextButton2.Size = UDim2.new(0, 200, 0, 50)
+					TextButton2.Font = Enum.Font.SourceSans
+					TextButton2.Text = z.Name
+					TextButton2.TextColor3 = Color3.new(0, 0, 0)
+					TextButton2.TextScaled = true
+					TextButton2.TextSize = 14
+					TextButton2.TextWrapped = true
+					TextButton2.Text = z.Name
+					if TextButton2.Text == "Combat" then
+						TextButton2:remove()
+					end
+				end
+				wait()
+				for _,t in pairs(script.Parent.Parent.Backpack:GetChildren()) do
+					t:remove()
+				end
+				wait()
+				local uigridlayout = Instance.new("UIGridLayout")
+				uigridlayout.CellSize = UDim2.new(0.95, 0, 0.04, 0)
+				uigridlayout.Parent = script.Parent.Parent.Backpack
+				
+				for _,o in pairs(game.Players[c.Name].Backpack:GetChildren()) do
+					local TextButton3 = Instance.new("TextButton")
+					TextButton3.Parent = script.Parent.Parent.Backpack
+					TextButton3.BackgroundColor3 = Color3.new(0.921569, 0.921569, 0)
+					TextButton3.Size = UDim2.new(0, 200, 0, 50)
+					TextButton3.Font = Enum.Font.SourceSans
+					TextButton3.Text = o.Name
+					TextButton3.TextColor3 = Color3.new(0, 0, 0)
+					TextButton3.TextScaled = true
+					TextButton3.TextSize = 14
+					TextButton3.TextWrapped = true
+					TextButton3.Text = o.Name
+					if TextButton3.Text == "Combat" then
+						TextButton3:remove()
+					end
+				end	
+				textler.Strength.Text = "Strength: "..datas.Strength.Value
+				textler.Speed.Text = "Speed: "..datas.Speed.Value
+				textler.Ki.Text = "Ki: "..datas.Ki.Value
+				textler.Rebirth.Text = "Rebirth: "..datas.Rebirth.Value
+				textler.PLlvl.Text = "Base Power Level: "..(datas.Strength.Value*datas.Rebirth.Value/10) + datas.Strength.Value
+				script.Parent.Parent[" PlrName"].Text = c.Name
+				
+				for _,u in pairs(script.Parent.Parent.FusePlrList:GetChildren()) do
+					u:Remove()
+				end
+				wait()
+				
+				local uigridlayout = Instance.new("UIGridLayout")
+				uigridlayout.CellSize = UDim2.new(0.92, 0, 0.04, 0)
+				uigridlayout.CellPadding = UDim2.new(0, 0, 0, 5)
+				uigridlayout.Parent = script.Parent.Parent.FusePlrList
+				
+				for _,j in pairs(game.Players:GetChildren())do
+					local datas1 = game.ReplicatedStorage.Datas
+					local datas = datas1
+					local TextButton1 = Instance.new("TextButton")	
+					local FuseStats = script.Parent.Parent["Fuse Stats Show"]
+					TextButton1.Parent = script.Parent.Parent.FusePlrList
+					TextButton1.BackgroundColor3 = Color3.new(0.792157, 0.792157, 0)
+					TextButton1.Size = UDim2.new(0, 200, 0, 50)
+					TextButton1.Font = Enum.Font.SourceSans
+					TextButton1.TextColor3 = Color3.new(1, 1, 0)
+					TextButton1.TextScaled = true
+					TextButton1.TextSize = 14
+					TextButton1.TextWrapped = true
+					TextButton1.Name = j.Name
+					TextButton1.Text = j.Name
+					if TextButton1.Text == script.Parent.Parent[" PlrName"].Text then
+						TextButton1:remove()
+					end
+					TextButton1.MouseButton1Click:connect(function()
+						FuseStats.Strength.Text = "Strength: "..datas[script.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value
+						FuseStats.Speed.Text = "Speed: "..datas[script.Parent.Parent[" PlrName"].Text].Speed.Value + datas[j.Name].Speed.Value
+						FuseStats.Ki.Text = "Ki: "..datas[script.Parent.Parent[" PlrName"].Text].Ki.Value + datas[j.Name].Ki.Value
+						FuseStats.Rebirth.Text = "Rebirth: "..datas[script.Parent.Parent[" PlrName"].Text].Rebirth.Value + datas[j.Name].Rebirth.Value
+						FuseStats.PowerLevel.Text = "Fusion Power Level: "..tostring((datas[script.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value)*(datas[script.Parent.Parent[" PlrName"].Text].Rebirth.Value/10 + datas[j.Name].Rebirth.Value/10)+(datas[script.Parent.Parent[" PlrName"].Text].Strength.Value + datas[j.Name].Strength.Value))
+					end)
+				end
+			end)
+		end
+		
+	end
+	coroutine.resume(coroutine.create(SCRIPT_UUOU84_FAKESCRIPT))
+
+end)
     
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
