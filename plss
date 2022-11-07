@@ -1817,7 +1817,28 @@ Buttons:Button("Scouter", function() -- This is A Button
 	coroutine.resume(coroutine.create(SCRIPT_UUOU84_FAKESCRIPT))
 
 end)
-    
+Train:Button("Inf Ki On", function() -- This is A Button
+    local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.RightHand.RightGripAttachment,
+    [2] = game:GetService("Players").LocalPlayer.Character.LeftHand.LeftGripAttachment,
+    [3] = -99999999
+}
+
+game:GetService("ReplicatedStorage").Events.volley:FireServer(unpack(args))
+
+end)
+Train:Button("Inf Ki Off", function() -- This is A Button
+    local args = {
+    [1] = game:GetService("Players").LocalPlayer.Character.RightHand.RightGripAttachment,
+    [2] = game:GetService("Players").LocalPlayer.Character.LeftHand.LeftGripAttachment,
+    [3] = 99999999
+}
+
+game:GetService("ReplicatedStorage").Events.volley:FireServer(unpack(args))
+
+end)
+
+
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
