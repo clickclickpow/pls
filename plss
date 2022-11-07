@@ -194,8 +194,8 @@ end end)
 Toggles:Toggle("Eye Cancer", false, function(t) -- This is A Toggle
 ho = t
    while ho do task.wait()
-      local nigger = game:GetService("Players").zzotac.Character.HumanoidRootPart
-local noob   = game:GetService("Players").zzotac.Character.Effects
+      local nigger = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart
+local noob   = game:GetService("Players").LocalPlayer.Character.Effects
 local amount = 1
 local color1 = "Red"
 local color2 = "Green"
