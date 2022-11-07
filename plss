@@ -535,7 +535,16 @@ tp:Button("Super strong", function()
   game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1707, 4877, 4251)
 end)
 
-op:Button("Crash", function()
+Attack:Button("Crash", function()
+
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157297, 250480, 258761)
+	while true do
+		wait(0.01)
+
+	
+	game:GetService("Workspace").zzotac.HumanoidRootPart.Anchored = true
+	
+
   local args = {
     [1] = "Kamehameha"
 }
@@ -590,6 +599,7 @@ local args = {
 game:GetService("ReplicatedStorage").Events.beam:FireServer(unpack(args))
 wait(1)
 game:Shutdown()
+end
 end)
 
 Train:Button("Dummies", function()
