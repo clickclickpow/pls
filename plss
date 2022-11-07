@@ -68,7 +68,7 @@ end)
 op:Button("Op script", function()
  
 
-  local hi = Instance.new("Sound")
+ local hi = Instance.new("Sound")
 hi.Name = "Sound"
 hi.SoundId = "http://www.roblox.com/asset/?id=2506564617"
 hi.Volume = 10
