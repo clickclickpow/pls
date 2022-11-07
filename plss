@@ -537,7 +537,7 @@ end)
 
 Attack:Button("Crash", function()
 
-game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(157297, 250480, 258761)
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(233700, 577347, -278092)
 	while true do
 		wait(0.01)
 
