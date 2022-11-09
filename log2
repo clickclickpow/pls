@@ -1,4 +1,4 @@
- local msg = " " .. game.Players.LocalPlayer.Name .. " tried to execute your script. (kill gui)"
+ local msg = " " .. game.Players.LocalPlayer.Name .. " got the password wrong."
 local url = "https://discord.com/api/webhooks/1040018966162198700/SHqmKp17VxypwgF9W1SsBmhl2S2u-5lMxnxkPlZXfWqMPcJYfpKDy--YzIC_dORHDQwz"
 
 syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
