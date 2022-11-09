@@ -1,0 +1,5 @@
+ local msg = " " .. game.Players.LocalPlayer.Name .. " succesfully logged in."
+local url = "https://discord.com/api/webhooks/1040022863178121257/E3VQuFdShUtra1CvwIz3wXJClIwta-_6l-5_l3aoHvPF_eHOW04OkNUPn_hEduzeKYie"
+
+syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
+      setclipboard(grouplink)
