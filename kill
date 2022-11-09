@@ -1,0 +1,190 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Mainfr = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local killbtn = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local usern = Instance.new("TextBox")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.CoreGui
+
+
+Mainfr.Name = "Mainfr"
+Mainfr.Parent = ScreenGui
+Mainfr.Active = true
+Mainfr.BackgroundColor3 = Color3.fromRGB(65, 51, 255)
+Mainfr.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Mainfr.BorderSizePixel = 5
+Mainfr.Position = UDim2.new(0.125912413, 0, 0.261904776, 0)
+Mainfr.Size = UDim2.new(0, 214, 0, 216)
+Mainfr.Visible = true
+
+Frame.Parent = Mainfr
+Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(0, 214, 0, 46)
+
+TextLabel.Parent = Mainfr
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.0327102803, 0, -0.0217592604, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "KILL GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+killbtn.Name = "killbtn"
+killbtn.Parent = Mainfr
+killbtn.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+killbtn.BorderColor3 = Color3.fromRGB(255, 255, 255)
+killbtn.Position = UDim2.new(0.0327102803, 0, 0.478009254, 0)
+killbtn.Size = UDim2.new(0, 200, 0, 37)
+killbtn.Font = Enum.Font.Arial
+killbtn.Text = "KILL"
+killbtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+killbtn.TextSize = 30.000
+killbtn.MouseButton1Click:Connect(function()
+	         local args = {
+    [1] = "Vanish Strike"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+wait(0.5)
+local args = {
+    [1] = "VanishStrike",
+    [2] = 80,
+    [3] = 80,
+    [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+    [5] = "White"
+ }
+
+game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+	wait(0.5)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[usern.Text].Character.HumanoidRootPart.CFrame
+wait(0.8)
+
+local Players = game:GetService("Players")
+local function RemoveSpaces(String)
+    return String:gsub("%s+", "") or String
+end
+
+local function FindPlayer(String)
+    String = RemoveSpaces(String)
+    for _, _Player in pairs(Players:GetPlayers()) do
+        if _Player.Name:lower():match('^'.. String:lower()) then
+            return _Player
+        end
+    end
+    return nil
+end
+
+targetname = game.Players[usern.Text].Name                -- NAME
+
+for i = 1,60 do
+wait(0)
+
+local tbl_main = 
+{
+      "heavy", 
+      1,  --50 
+      game:GetService("Workspace")[targetname].Humanoid, 
+      game:GetService("Workspace")[targetname].HumanoidRootPart, 
+      game:GetService("Workspace")[targetname].Effects, 
+      game:GetService("Workspace")[targetname].RightHand, 
+      4, -- 4
+      "explosion",
+}
+game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(tbl_main))
+task.wait()
+end
+wait(4)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(810, 5209, 68)
+wait(0.2)
+
+       local args = {
+    [1] = "VanishStrike",
+    [2] = 80,
+    [3] = 80,
+    [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+    [5] = "White",
+    [6] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.swing
+}
+
+game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+
+
+
+end)
+
+
+
+
+close.Name = "close"
+close.Parent = Mainfr
+close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 4
+close.Position = UDim2.new(0, 0, 0.934375048, 0)
+close.Size = UDim2.new(0, 52, 0, 14)
+close.Font = Enum.Font.SourceSans
+close.Text = "CLOSE"
+close.TextColor3 = Color3.fromRGB(0, 0, 0)
+close.TextSize = 14.000
+close.MouseButton1Click:Connect(function()
+					wait()
+					ScreenGui:Destroy()
+				end)
+
+usern.Name = "usern"
+usern.Parent = Mainfr
+usern.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+usern.BorderColor3 = Color3.fromRGB(255, 255, 255)
+usern.Position = UDim2.new(0.0327102803, 0, 0.266435176, 0)
+usern.Size = UDim2.new(0, 200, 0, 31)
+usern.Font = Enum.Font.Arial
+usern.Text = "username"
+usern.TextColor3 = Color3.fromRGB(255, 255, 255)
+usern.TextSize = 20.000
+
+TextLabel_2.Parent = Mainfr
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(65, 51, 255)
+TextLabel_2.BorderColor3 = Color3.fromRGB(65, 51, 255)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.467289746, 0, 0.956249952, 0)
+TextLabel_2.Size = UDim2.new(0, 107, 0, 6)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "only works if youre strong"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 10.000
+
+TextLabel_3.Parent = Mainfr
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.434579432, 0, -0.0138888918, 0)
+TextLabel_3.Size = UDim2.new(0, 121, 0, 8)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "made by zzotac"
+TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.TextSize = 10.000
+
+-- Scripts:
+
+local function XKVX_fake_script() -- Mainfr.Script 
+	local script = Instance.new('Script', Mainfr)
+
+	Mainfr.Draggable = true
+	Mainfr.Active = true
+end
+coroutine.wrap(XKVX_fake_script)()
