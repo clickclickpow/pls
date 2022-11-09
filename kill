@@ -93,7 +93,7 @@ end
 targetname = game.Players[usern.Text].Name                -- NAME
 
 for i = 1,200 do
-
+wait()
 
 local tbl_main = 
 {
