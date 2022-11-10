@@ -1,5 +1,3 @@
-
-
 local TPgui = Instance.new("ScreenGui")
 local TPmain = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -47,8 +45,19 @@ tp.Font = Enum.Font.SourceSans
 tp.TextColor3 = Color3.fromRGB(255, 255, 255)
 tp.TextSize = 20.000
 tp.MouseButton1Click:Connect(function()
-	
-	
+    
+    
+	        local args = {
+    [1] = "VanishStrike",
+    [2] = 80,
+    [3] = 80,
+    [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+    [5] = "White",
+    [6] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.swing
+}
+
+game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+	wait(0.1)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tpto.Text].Character.HumanoidRootPart.CFrame
 end)
 
@@ -89,4 +98,10 @@ tpto.FocusLost:connect(function()
 				tpto.Text = v.Name
 			end
 		end
-	end)
+end)
+
+            local args = {
+    [1] = "Vanish Strike"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
