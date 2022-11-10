@@ -1868,6 +1868,44 @@ Guis:Button("Python age calculator", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/pythonage'))()
 end)
 
+Buttons:Button("Goku Teleport", function() -- This is A Button
+  
+
+
+local args = {
+		[1] = "Vanish Strike"
+	}
+
+	game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+
+plr = game.Players.LocalPlayer 
+hum = plr.Character.HumanoidRootPart
+mouse = plr:GetMouse() 
+mouse.KeyDown:connect(function(key)
+if key == "r" then 
+ 
+ 
+ 
+ local args = {
+		[1] = "VanishStrike",
+		[2] = 0,
+		[3] = 80,
+		[4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+		[5] = "White",
+		[6] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.swing
+	}
+
+	game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+wait(0.1)
+
+if key == "r" then 
+if mouse.Target then 
+hum.CFrame = CFrame.new(mouse.Hit.x, mouse.Hit.y + 5, mouse.Hit.z) 
+end 
+end
+end 
+end)
+end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
