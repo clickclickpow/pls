@@ -1,0 +1,227 @@
+local calculator = Instance.new("ScreenGui")
+local calcmain = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Frame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local age1 = Instance.new("TextLabel")
+local UICorner_3 = Instance.new("UICorner")
+local calculating = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local reset = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local grt = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local PA = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local age = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local cal = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local ImageButton = Instance.new("ImageButton")
+
+calculator.Name = "calculator"
+calculator.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+calculator.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+PA.Name = "PA"
+PA.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+PA.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = PA
+Mainframe.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Mainframe.BorderColor3 = Color3.fromRGB(26, 255, 10)
+Mainframe.BorderSizePixel = 0
+Mainframe.Position = UDim2.new(0.173322663, 0, 0.197278887, 0)
+Mainframe.Size = UDim2.new(0, 174, 0, 270)
+
+UICorner.Parent = Mainframe
+
+TextLabel.Parent = Mainframe
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0, 174, 0, 50)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "Python age calculator"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 17.000
+
+UICorner_2.Parent = TextLabel
+
+age.Name = "age"
+age.Parent = Mainframe
+age.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+age.BorderColor3 = Color3.fromRGB(255, 255, 255)
+age.Position = UDim2.new(0.068965517, 0, 0.251851857, 0)
+age.Size = UDim2.new(0, 109, 0, 36)
+age.Font = Enum.Font.Arial
+age.Text = "your age"
+age.TextColor3 = Color3.fromRGB(0, 0, 0)
+age.TextSize = 14.000
+
+UICorner_3.Parent = age
+
+TextButton.Parent = Mainframe
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.Position = UDim2.new(0, 0, 0.155555561, 0)
+TextButton.Size = UDim2.new(0, 174, 0, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = ""
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+cal.Name = "cal"
+cal.Parent = Mainframe
+cal.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+cal.Position = UDim2.new(0.068965517, 0, 0.518518567, 0)
+cal.Size = UDim2.new(0, 145, 0, 36)
+cal.Font = Enum.Font.Arial
+cal.Text = "CALCULATE"
+cal.TextColor3 = Color3.fromRGB(0, 0, 0)
+cal.TextSize = 14.000
+cal.MouseButton1Click:Connect(function()
+       PA:Destroy()
+       calcmain.Visible = true
+       wait(2)
+       local hi = Instance.new("Sound")
+hi.Name = "Sound"
+hi.SoundId = "http://www.roblox.com/asset/?id=5274463739"
+hi.Volume = 10
+hi.Looped = false
+hi.archivable = false
+hi.Parent = game.Workspace
+
+if game.Players.LocalPlayer.Character.Humanoid.Health > 10 then
+hi:Play()
+end
+       calculating.Visible = false
+       grt.Visible = true
+        age1.Visible = true
+        
+    
+end)
+
+UICorner_4.Parent = cal
+
+ImageButton.Parent = Mainframe
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.Position = UDim2.new(0.195402309, 0, 0.73333329, 0)
+ImageButton.Size = UDim2.new(0, 100, 0, 66)
+ImageButton.Image = "http://www.roblox.com/asset/?id=4688175775"
+
+-- Scripts:
+
+local function DYGQOWR_fake_script() -- Mainframe.Script 
+	local script = Instance.new('Script', Mainframe)
+
+	local Mainframe = script.Parent
+	
+	Mainframe.Active = true
+	Mainframe.Draggable = true
+end
+coroutine.wrap(DYGQOWR_fake_script)()
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+
+
+calcmain.Name = "calcmain"
+calcmain.Parent = calculator
+calcmain.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+calcmain.Position = UDim2.new(0.361643821, 0, 0.293650806, 0)
+calcmain.Size = UDim2.new(0, 166, 0, 82)
+calcmain.Visible = false
+
+UICorner.Parent = calcmain
+
+Frame.Parent = calcmain
+Frame.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+Frame.Position = UDim2.new(0.0481929556, 0, 0.402439028, 0)
+Frame.Size = UDim2.new(0, 149, 0, 22)
+
+UICorner_2.Parent = Frame
+
+age1.Name = "age1"
+age1.Parent = calcmain
+age1.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+age1.Position = UDim2.new(0.112108678, 0, 0.445357025, 0)
+age1.Size = UDim2.new(0, 110, 0, 14)
+age1.Font = Enum.Font.Arial
+age1.Text = ""
+age1.TextColor3 = Color3.fromRGB(0, 0, 0)
+age1.TextSize = 14.000
+age1.TextXAlignment = Enum.TextXAlignment.Left
+age1.Visible = false
+
+UICorner_3.Parent = age1
+
+calculating.Name = "calculating"
+calculating.Parent = calcmain
+calculating.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+calculating.Position = UDim2.new(0.0423667133, 0, 0.0931364447, 0)
+calculating.Size = UDim2.new(0, 157, 0, 19)
+calculating.Font = Enum.Font.Arial
+calculating.Text = "Calculating..."
+calculating.TextColor3 = Color3.fromRGB(255, 255, 255)
+calculating.TextSize = 14.000
+calculating.Visible = true
+
+UICorner_4.Parent = calculating
+
+reset.Name = "reset"
+reset.Parent = calcmain
+reset.BackgroundColor3 = Color3.fromRGB(216, 216, 216)
+reset.Position = UDim2.new(0.0963856876, 0, 0.792683005, 0)
+reset.Size = UDim2.new(0, 134, 0, 15)
+reset.Font = Enum.Font.SourceSans
+reset.Text = "RESET"
+reset.TextColor3 = Color3.fromRGB(0, 0, 0)
+reset.TextSize = 14.000
+reset.MouseButton1Click:Connect(function()
+    PA:Destroy()
+    calculator:Destroy()
+    wait(0.5)
+    
+end)
+
+
+UICorner_5.Parent = reset
+
+grt.Name = "grt"
+grt.Parent = calcmain
+grt.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+grt.Position = UDim2.new(0.0423667133, 0, 0.0931364447, 0)
+grt.Size = UDim2.new(0, 157, 0, 19)
+grt.Font = Enum.Font.Arial
+grt.Text = "Done."
+grt.TextColor3 = Color3.fromRGB(255, 255, 255)
+grt.TextSize = 14.000
+grt.Visible = false
+
+UICorner_6.Parent = grt
+
+-- Scripts:
+
+local function CONMLMS_fake_script() -- calcmain.Script 
+	local script = Instance.new('Script', calcmain)
+
+	local calculator = script.Parent
+	
+	calculator.Active = true
+	calculator.Draggable = true
+end
+coroutine.wrap(CONMLMS_fake_script)()
+
+spawn(function()
+    while true do task.wait()
+        age1.Text = age.Text
+end
+end)
