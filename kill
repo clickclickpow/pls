@@ -247,7 +247,7 @@ God.MouseButton1Click:Connect(function()
 		game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(tbl_main))
 		task.wait()
 	end
-	wait()
+	wait(0.4)
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(810, 5209, 68)
 	wait(0.2)
 
