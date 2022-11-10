@@ -60,3 +60,5 @@ local p = game:GetService("Players").LocalPlayer
 ts:Teleport(game.PlaceId, p)
 end
 end)
+
+print("executed admin")
