@@ -42,6 +42,7 @@ tp.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
 tp.Position = UDim2.new(0.136929467, 0, 0.620000005, 0)
 tp.Size = UDim2.new(0, 174, 0, 27)
 tp.Font = Enum.Font.SourceSans
+tp.Text = "Teleport"
 tp.TextColor3 = Color3.fromRGB(255, 255, 255)
 tp.TextSize = 20.000
 tp.MouseButton1Click:Connect(function()
