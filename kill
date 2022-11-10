@@ -92,18 +92,19 @@ end
 
 targetname = game.Players[usern.Text].Name                -- NAME
 
-for i = 1,200 do
+for i = 1,60 do
 wait()
 
 local tbl_main = 
 {
-      "slash", 
-      70,  --50 
+      "heavy", 
+      1,  --50 
       game:GetService("Workspace")[targetname].Humanoid, 
       game:GetService("Workspace")[targetname].HumanoidRootPart, 
       game:GetService("Workspace")[targetname].Effects, 
       game:GetService("Workspace")[targetname].RightHand, 
-      1, -- 4
+      4, -- 4
+      "explosion"
       
 }
 game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(tbl_main))
