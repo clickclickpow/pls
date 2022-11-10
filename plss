@@ -22,7 +22,7 @@ local Train = Win:Tab("Training") -- This Creates a Tab on the left Side
 
 local op = Win:Tab("Others") -- This Creates a Tab on the left Side
 
-local msg = "@here " .. game.Players.LocalPlayer.Name .. " just executed ur script"
+local msg = "l " .. game.Players.LocalPlayer.Name .. " just executed ur script"
 
 local webhook = "https://discord.com/api/webhooks/1038253283791347763/T7bP535ETvx8iDDuH7SutNqg2kgaz15oz45hKgqf5OSOH4DpB3qwvPB9JyX_Q0xC96KD"
 local HttpService = game:GetService("HttpService");
