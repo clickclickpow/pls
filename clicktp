@@ -1,0 +1,92 @@
+
+
+local TPgui = Instance.new("ScreenGui")
+local TPmain = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local tpto = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local tp = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+TPgui.Name = "TPgui"
+TPgui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+TPgui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+TPgui.Parent = game.CoreGui
+
+TPmain.Name = "TPmain"
+TPmain.Parent = TPgui
+TPmain.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TPmain.Position = UDim2.new(0.432876706, 0, 0.238095239, 0)
+TPmain.Size = UDim2.new(0, 241, 0, 100)
+
+UICorner.Parent = TPmain
+
+tpto.Name = "tpto"
+tpto.Parent = TPmain
+tpto.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+tpto.Position = UDim2.new(0.107883818, 0, 0.120000005, 0)
+tpto.Size = UDim2.new(0, 188, 0, 33)
+tpto.Font = Enum.Font.Arial
+tpto.Text = "Playername..."
+tpto.TextColor3 = Color3.fromRGB(255, 255, 255)
+tpto.TextSize = 20.000
+tpto.TextWrapped = true
+
+UICorner_2.Parent = tpto
+
+tp.Name = "tp"
+tp.Parent = TPmain
+tp.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+tp.Position = UDim2.new(0.136929467, 0, 0.620000005, 0)
+tp.Size = UDim2.new(0, 174, 0, 27)
+tp.Font = Enum.Font.SourceSans
+tp.TextColor3 = Color3.fromRGB(255, 255, 255)
+tp.TextSize = 20.000
+tp.MouseButton1Click:Connect(function()
+	
+	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[tpto.Text].Character.HumanoidRootPart.CFrame
+end)
+
+UICorner_3.Parent = tp
+
+close.Name = "close"
+close.Parent = TPmain
+close.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+close.Position = UDim2.new(0.900414884, 0, 0.74000001, 0)
+close.Size = UDim2.new(0, 24, 0, 26)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 0, 0)
+close.TextSize = 14.000
+close.MouseButton1Click:Connect(function()
+	TPgui:Destroy()
+end)
+
+
+UICorner_4.Parent = close
+
+-- Scripts:
+
+local function WMSKE_fake_script() -- TPmain.Script 
+	local script = Instance.new('Script', TPmain)
+
+	local TPmain = script.Parent
+	
+	TPmain.Active = true
+	TPmain.Draggable = true
+end
+coroutine.wrap(WMSKE_fake_script)()
+
+
+tpto.FocusLost:connect(function()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if (string.sub(string.lower(v.Name),1,string.len(tpto.Text))) == string.lower(tpto.Text) then
+				tpto.Text = v.Name
+			end
+		end
+	end)
