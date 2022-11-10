@@ -1,7 +1,5 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
+
 
 local killgui = Instance.new("ScreenGui")
 local Kill = Instance.new("Frame")
@@ -70,6 +68,9 @@ Kill_2.Text = "Kill"
 Kill_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 Kill_2.TextSize = 20.000
 Kill_2.MouseButton1Click:Connect(function()
+	
+	
+	
 	local args = {
 		[1] = "Vanish Strike"
 	}
@@ -271,8 +272,16 @@ local function RZMM_fake_script() -- Kill.Script
 	local script = Instance.new('Script', Kill)
 
 	local Kill = script.Parent
-	
+
 	Kill.Active = true
 	Kill.Draggable = true
 end
 coroutine.wrap(RZMM_fake_script)()
+
+user.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(user.Text))) == string.lower(user.Text) then
+			user.Text = v.Name
+		end
+	end
+end)
