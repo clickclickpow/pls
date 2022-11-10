@@ -10,6 +10,8 @@ local Toggles = Win:Tab("Toggles") -- This Creates a Tab on the left Side
 
 local Slides = Win:Tab("Slides") -- This Creates a Tab on the left Side
 
+local Guis = Win:Tab("Guis") -- This Creates a Tab on the left Side
+
 local tp = Win:Tab("Teleports") -- This Creates a Tab on the left Side
 
 local Attack = Win:Tab("Attacks") -- This Creates a Tab on the left Side
@@ -1855,7 +1857,13 @@ Train:Button("Inf Ki Off", function() -- This is A Button
 game:GetService("ReplicatedStorage").Events.volley:FireServer(unpack(args))
 
 end)
+Guis:Button("Kill Gui", function() -- This is A Button
+loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/main/kg'))()
+end)
 
+Guis:Button("Python age calculator", function() -- This is A Button
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/pythonage'))()
+end)
 
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
