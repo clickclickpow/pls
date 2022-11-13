@@ -1,7 +1,10 @@
 local plrr = "zzotac"
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
 
-event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+if game.Players.LocalPlayer.Name == plrr then
+    print("owner")
+else
+    event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
   if click.FromSpeaker == plrr then
       if click.Message == ".kill" then
           game.Players.LocalPlayer.Character.Humanoid.Health = 0
@@ -13,7 +16,7 @@ end)
 event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
   if click.FromSpeaker == plrr then
       if click.Message == ".bring" then
-          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.zzotac.Character.HumanoidRootPart.CFrame
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.Mihajlo42Savic.Character.HumanoidRootPart.CFrame
 
 end
 end
@@ -62,4 +65,4 @@ game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageReque
 end
 end
 end)
-
+end
