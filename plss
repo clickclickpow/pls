@@ -1898,7 +1898,7 @@ end)
 
 Buttons:Button("Remove face", function() -- This is A Button
   loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/main/fsa'))()
-  end
+  end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
