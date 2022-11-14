@@ -1969,7 +1969,7 @@ end)
 
 
 Train:Button("Kill dummies", function() -- This is A Button
-  https://raw.githubusercontent.com/clickclickpow/pls/main/killdummies
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killdummies'))()
 end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
