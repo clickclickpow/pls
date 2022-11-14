@@ -663,7 +663,7 @@ game:Shutdown()
 end
 end)
 
-Train:Button("Dummies", function()
+Train:Button("Bring dummies", function()
     game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(73, 4929, -1474)
 wait(.6)
 MagnitudeDIS = 2000
@@ -1968,7 +1968,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/mai
 end)
 
 
-Train:Button("Kill dummies", function() -- This is A Button
+Train:Button("Kill dummies (only works after bringing all of them)", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killdummies'))()
 end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
