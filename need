@@ -1,0 +1,34 @@
+  local args = {
+    [1] = "Stardust Breaker"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+
+
+
+   local args = {
+    [1] = "Super Spirit Bomb"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+
+
+   while hy do task.wait()
+      local args = {
+    [1] = "God Breaker"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Final Explosion"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
+
+       local args = {
+    [1] = "Destructo Disc"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
