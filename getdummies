@@ -1,0 +1,31 @@
+MagnitudeDIS = 2000
+
+for i = 1,1 do
+	wait()
+	local plr = game:GetService("Players").LocalPlayer
+	local char = plr.Character
+	local health = -9999999
+	local extraSpecification = ""
+	for i, v in next, workspace:GetChildren() do
+		if v.Name:find("Dummy") and v.Name:find(extraSpecification) then
+			if (char.HumanoidRootPart.Position - v.HumanoidRootPart.Position).Magnitude < MagnitudeDIS then
+				local args = {
+					[1] = "heavy",
+					[2] = health,
+					[3] = v.Humanoid,
+					[4] = v.HumanoidRootPart,
+					[5] = char.Effects,
+					[6] = v.Head,
+					[7] = 900,
+					[8] = "explosion"
+				}
+				print(unpack(args))
+
+				game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(args))
+				task.wait(0)
+			end
+		end
+
+		task.wait()
+	end
+end
