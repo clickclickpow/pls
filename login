@@ -50,9 +50,9 @@ Log.MouseButton1Click:Connect(function()
 	if password.Text == "foru" then
 		Login:Destroy()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/right'))()
+		
 	else
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/log2'))()
+		
 	end
 end)
 
