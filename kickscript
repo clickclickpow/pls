@@ -1,0 +1,41 @@
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hum = char:FindFirstChild("Humanoid")
+local oldHealth = hum.Health
+
+hum.HealthChanged:Connect(function(newHealth)
+
+    if newHealth < oldHealth then
+
+        game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136666.359, 55158.582, 135113.359)
+        wait(3)
+        game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(759.175964, 4928.4043, 12.3242512)
+
+    end
+
+end)
+
+
+while true do
+    wait()
+if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
+    wait(10)
+    local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hum = char:FindFirstChild("Humanoid")
+local oldHealth = hum.Health
+
+hum.HealthChanged:Connect(function(newHealth)
+
+    if newHealth < oldHealth then
+
+        game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(136666.359, 55158.582, 135113.359)
+        wait(3)
+        game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(759.175964, 4928.4043, 12.3242512)
+
+    end
+
+end)
+
+end
+end
