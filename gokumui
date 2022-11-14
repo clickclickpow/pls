@@ -20,7 +20,7 @@ local UICorner_5 = Instance.new("UICorner")
 goku.Name = "goku"
 goku.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 goku.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-goku.Parent = game.CoreGui
+
 
 Gokumain.Name = "Gokumain"
 Gokumain.Parent = goku
