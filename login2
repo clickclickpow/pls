@@ -49,10 +49,9 @@ Log.TextSize = 23.000
 Log.MouseButton1Click:Connect(function()
 	if password.Text == "22gz" then
 		Login:Destroy()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/right'))()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/gokumui'))()
 	else
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/log2'))()
+		
 	end
 end)
 
