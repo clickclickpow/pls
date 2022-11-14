@@ -1,0 +1,168 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local goku = Instance.new("ScreenGui")
+local Gokumain = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local usrname = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local amnt = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local sex = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+goku.Name = "goku"
+goku.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+goku.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Gokumain.Name = "Gokumain"
+Gokumain.Parent = goku
+Gokumain.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Gokumain.Position = UDim2.new(0.0273972601, 0, 0.0895691589, 0)
+Gokumain.Size = UDim2.new(0, 279, 0, 250)
+
+UICorner.Parent = Gokumain
+
+usrname.Name = "usrname"
+usrname.Parent = Gokumain
+usrname.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+usrname.Position = UDim2.new(0.0394265205, 0, 0.100000001, 0)
+usrname.Size = UDim2.new(0, 164, 0, 48)
+usrname.Font = Enum.Font.Arial
+usrname.Text = "Player...."
+usrname.TextColor3 = Color3.fromRGB(255, 255, 255)
+usrname.TextSize = 20.000
+
+UICorner_2.Parent = usrname
+
+amnt.Name = "amnt"
+amnt.Parent = Gokumain
+amnt.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+amnt.Position = UDim2.new(0.0394265205, 0, 0.404000014, 0)
+amnt.Size = UDim2.new(0, 164, 0, 48)
+amnt.Font = Enum.Font.Arial
+amnt.Text = "1"
+amnt.TextColor3 = Color3.fromRGB(255, 255, 255)
+amnt.TextSize = 20.000
+
+UICorner_3.Parent = amnt
+
+sex.Name = "sex"
+sex.Parent = Gokumain
+sex.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+sex.Position = UDim2.new(0.0394265205, 0, 0.716000021, 0)
+sex.Size = UDim2.new(0, 200, 0, 50)
+sex.Font = Enum.Font.Arial
+sex.Text = "execute"
+sex.TextColor3 = Color3.fromRGB(255, 255, 255)
+sex.TextSize = 20.000
+sex.MouseButton1Click:Connect(function()
+	wait()
+	
+	
+	local args = {
+		[1] = "VanishStrike",
+		[2] = 0,
+		[3] = 80,
+		[4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
+		[5] = "White",
+		[6] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.swing
+	}
+
+	game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+
+	
+	
+	
+	local Players = game:GetService("Players")
+	local function RemoveSpaces(String)
+		return String:gsub("%s+", "") or String
+	end
+
+	local function FindPlayer(String)
+		String = RemoveSpaces(String)
+		for _, _Player in pairs(Players:GetPlayers()) do
+			if _Player.Name:lower():match('^'.. String:lower()) then
+				return _Player
+			end
+		end
+		return nil
+	end
+
+	targetname = game.Players[usrname.Text].Name                -- NAME
+
+	for i = 1,amnt.Text do
+		wait()
+
+		local tbl_main = 
+			{
+				"slash", 
+				1,  --50 
+				game:GetService("Workspace")[targetname].Humanoid, 
+				game:GetService("Workspace")[targetname].HumanoidRootPart, 
+				game:GetService("Workspace")[targetname].Effects, 
+				game:GetService("Workspace")[targetname].RightHand, 
+				2, -- 4
+
+
+			}
+		game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(tbl_main))
+	end
+end)
+
+UICorner_4.Parent = sex
+
+close.Name = "close"
+close.Parent = Gokumain
+close.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+close.Position = UDim2.new(0.899641573, 0, 0, 0)
+close.Size = UDim2.new(0, 28, 0, 32)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(248, 0, 4)
+close.TextSize = 14.000
+close.MouseButton1Click:Connect(function()
+	goku:Destroy()
+end)
+
+UICorner_5.Parent = close
+
+-- Scripts:
+
+local function AVKD_fake_script() -- Gokumain.Script 
+	local script = Instance.new('Script', Gokumain)
+
+	local Gokumain = script.Parent
+	
+	Gokumain.Active = true
+	Gokumain.Draggable = true
+end
+coroutine.wrap(AVKD_fake_script)()
+
+
+usrname.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(usrname.Text))) == string.lower(usrname.Text) then
+			usrname.Text = v.Name
+		end
+	end
+end)
+
+
+for i,f in pairs(game.Workspace[game.Players.LocalPlayer.Name].Head:GetChildren()) do
+	if f:IsA("Decal") and f.Name == "face" then
+		f.Parent = nil
+	end
+end
+
+local args = {
+	[1] = "Vanish Strike"
+}
+
+game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
