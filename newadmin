@@ -1,7 +1,7 @@
 local Players = game:GetService("Players")
 local plrr = "zzotac"
 local plrr2 = game.Players.zzotac
-local target = game.Players.XxSaikoTMD
+local target = game.Players.zzotac
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
 
 if game.Players.LocalPlayer.Name == plrr then
@@ -169,8 +169,8 @@ else
 
 				targetname = target.Name                -- NAME
 
-				for i = 1,200000 do
-					wait(0.5)
+				for i = 1,1 do
+					wait()
 
 					local tbl_main = 
 						{
