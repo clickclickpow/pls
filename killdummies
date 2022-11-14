@@ -1,0 +1,8 @@
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(752, 4743, -58)
+wait(0.2)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+wait(0.2)
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/getdummies'))()
+wait(4)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(755, 4928, -57)
