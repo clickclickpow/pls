@@ -47,7 +47,7 @@ Log.Text = "LOGIN"
 Log.TextColor3 = Color3.fromRGB(255, 255, 255)
 Log.TextSize = 23.000
 Log.MouseButton1Click:Connect(function()
-	if password.Text == "passw0rd" then
+	if password.Text == "bdk" then
 		Login:Destroy()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
 
