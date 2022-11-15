@@ -1971,7 +1971,26 @@ end)
 Train:Button("Kill dummies (only works after bringing all of them)", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killdummies'))()
 end)
+
+Attack:Toggle("Ki", false,function(t) -- This is A Toggle
+hz = t
+   while hz do task.wait()
+         mouse = game.Players.LocalPlayer:GetMouse()
+local pos = mouse.Hit
+pos = Vector3.new(pos.X,pos.Y,pos.Z)
+vector = pos
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.Effects,
+    [3] = vector,
+    [4] = game:GetService("Players").LocalPlayer.Character.RightHand
+}
+
+game:GetService("ReplicatedStorage").Events.blast:FireServer(unpack(args))
+end
+end)
+
+
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
-
