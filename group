@@ -4,11 +4,16 @@ local grouplink = "https://www.roblox.com/groups/14323051/r-m#!/about"
 
 
 if lc:IsInGroup(group) then -- IS In group is the roblox API Reference pretty self explanatory 
+
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/login3'))()
 else
-      game.Players.LocalPlayer:kick()
       
-
-	
+      setclipboard(grouplink)
+       game:GetService("StarterGui"):SetCore("SendNotification", {
+		Title = "";
+		Text = " ";
+	})
+	game.Players.LocalPlayer:kick()
 end
+
 
