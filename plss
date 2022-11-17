@@ -1204,7 +1204,7 @@ end
 end)
 Train:Toggle("Train Beam", false, function(t)
 hj = t 
-     while hp do task.wait()
+     while hj do task.wait()
       local args = {
     [1] = "Kamehameha"
 }
