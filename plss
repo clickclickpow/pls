@@ -448,7 +448,7 @@ wait(0.2)
 
 local args = {
     [1] = "VanishStrike",
-    [2] = 80,
+    [2] = 0,
     [3] = 80,
     [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
     [5] = "White"
@@ -466,7 +466,7 @@ end)
 Buttons:Button("Appear", function() -- This is A Button
 local args = {
     [1] = "VanishStrike",
-    [2] = 80,
+    [2] = 0,
     [3] = 80,
     [4] = game:GetService("Players").LocalPlayer.Backpack["Vanish Strike"],
     [5] = "White",
@@ -1992,6 +1992,33 @@ end)
 
 Guis:Button("Msg to webhook", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/robloxtoweb'))()
+end)
+
+
+Toggles:Toggle("Nigger", false,function(t) -- This is A Toggle
+hp = t
+   while hp do task.wait()
+       local args = {
+    [1] = "VanishStrike",
+    [2] = 0,
+    [3] = 80,
+    [4] = game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Vanish Strike"),
+    [5] = "White"
+}
+
+game:GetService("ReplicatedStorage").Events.heavy:FireServer(unpack(args))
+
+
+
+local args = {
+    [1] = true,
+    [2] = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
+    [3] = false
+}
+
+game:GetService("ReplicatedStorage").Events.aura:FireServer(unpack(args))
+       
+end
 end)
 
 Autofarm:Label("Hello") -- This is just for information or Text ;)
