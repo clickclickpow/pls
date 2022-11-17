@@ -1,0 +1,99 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local hook = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local msg = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local send = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+
+--Properties:
+
+hook.Name = "hook"
+hook.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+hook.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = hook
+Main.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Main.Position = UDim2.new(0.112534307, 0, 0.283908039, 0)
+Main.Size = UDim2.new(0, 550, 0, 222)
+
+UICorner.Parent = Main
+
+TextLabel.Parent = Main
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.Position = UDim2.new(0.318181813, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "Msg to webhook"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+UICorner_2.Parent = TextLabel
+
+msg.Name = "msg"
+msg.Parent = Main
+msg.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+msg.Position = UDim2.new(0.0290909093, 0, 0.283783793, 0)
+msg.Size = UDim2.new(0, 460, 0, 62)
+msg.Font = Enum.Font.Arial
+msg.Text = "Message here..."
+msg.TextColor3 = Color3.fromRGB(255, 255, 255)
+msg.TextSize = 20.000
+msg.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_3.Parent = msg
+
+send.Name = "send"
+send.Parent = Main
+send.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+send.Position = UDim2.new(0.0290909093, 0, 0.693693697, 0)
+send.Size = UDim2.new(0, 200, 0, 50)
+send.Font = Enum.Font.Arial
+send.Text = "Send"
+send.TextColor3 = Color3.fromRGB(255, 255, 255)
+send.TextSize = 20.000
+send.MouseButton1Click:Connect(function()
+	local msg = "** " .. game.Players.LocalPlayer.Name .. " : " ..msg.Text .. "**"
+	local url = "https://discord.com/api/webhooks/1042816261945577543/lb0zj-7D70MTF1HizN8NpXIrMN8fVhHez3Z7qh8IzEJGDyHwdfM9JOYW7GC1C8Au6OIq"
+
+	syn.request({Url = url, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game:GetService("HttpService"):JSONEncode({["content"]=msg})})
+end)
+
+UICorner_4.Parent = send
+
+close.Name = "close"
+close.Parent = Main
+close.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+close.Position = UDim2.new(0.963636339, 0, 0, 0)
+close.Size = UDim2.new(0, 20, 0, 21)
+close.Font = Enum.Font.Arial
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 0, 0)
+close.TextSize = 14.000
+close.MouseButton1Click:Connect(function()
+	hook:Destroy()
+end)
+
+UICorner_5.Parent = close
+
+-- Scripts:
+
+local function BYLR_fake_script() -- Main.Script 
+	local script = Instance.new('Script', Main)
+
+	local Main = script.Parent
+	
+	Main.Active = true
+	Main.Draggable = true
+end
+coroutine.wrap(BYLR_fake_script)()
