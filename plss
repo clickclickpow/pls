@@ -1153,7 +1153,7 @@ hp = t
 }
 
 game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
-wait()
+wait(0.2)
 
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
 cooldown = 0.80
@@ -1210,7 +1210,7 @@ hj = t
 }
 
 game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(args))
-wait()
+wait(0.2)
 
 local anim = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["Kamehameha"].LocalScript.Animation)
 cooldown = 0.80
