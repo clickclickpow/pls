@@ -16,7 +16,7 @@ local Slides = Win:Tab("Slides") -- This Creates a Tab on the left Side
 
 local Guis = Win:Tab("Guis") -- This Creates a Tab on the left Side
 
-local Anims = Win:Tab("Animations") -- This Creates a Tab on the left Side
+local Dbx = Win:Tab("Dbz") -- This Creates a Tab on the left Side
 
 local tp = Win:Tab("Teleports") -- This Creates a Tab on the left Side
 
@@ -46,77 +46,33 @@ hi = t
    end
 end)
 
-Anims:Button("Popstar", function()
-Animate.idle.Animation1.AnimationId = "http://www.roblox.com/asset/?id=1212900985"
-Animate.idle.Animation2.AnimationId = "http://www.roblox.com/asset/?id=1150842221"
-Animate.walk.WalkAnim.AnimationId = "http://www.roblox.com/asset/?id=1212980338"
-Animate.run.RunAnim.AnimationId = "http://www.roblox.com/asset/?id=1212980348"
-Animate.jump.JumpAnim.AnimationId = "http://www.roblox.com/asset/?id=1212954642"
-Animate.climb.ClimbAnim.AnimationId = "http://www.roblox.com/asset/?id=1213044953"
-Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=1212900995"
-game.Players.LocalPlayer.Character.Humanoid.Jump = true
-    
+Dbx:Toggle("Fast Tp", false,function(t) -- This is A Toggle
+hi = t
+   while hi do 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot1'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot2'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot3'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot4'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot5'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot6'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot7'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot8'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot9'))()
+wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/private/main/spot10'))()
+wait()
+
+end
 end)
 
-Anims:Button("Confident", function()
-    Animate.idle.Animation1.AnimationId = "rbxassetid://1069977950"
-				Animate.idle.Animation2.AnimationId = "rbxassetid://1069987858"
-				Animate.run.RunAnim.AnimationId = "rbxassetid://1070001516"
-				Animate.walk.WalkAnim.AnimationId = "rbxassetid://1070017263"
-				Animate.jump.JumpAnim.AnimationId = "rbxassetid://1069984524"
-				Animate.climb.ClimbAnim.AnimationId = "rbxassetid://1069946257"
-				Animate.fall.FallAnim.AnimationId = "rbxassetid://1069973677"
-				Animate.swim.Swim.AnimationId = "rbxassetid://1070009914"
-				Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://1070012133"
-end)
-
-Anims:Button("Patrol", function()
-    Animate.idle.Animation1.AnimationId = "rbxassetid://1149612882"
-															Animate.idle.Animation2.AnimationId = "rbxassetid://1150842221"
-															Animate.run.RunAnim.AnimationId = "rbxassetid://1150967949"
-															Animate.walk.WalkAnim.AnimationId = "rbxassetid://1151231493"
-															Animate.jump.JumpAnim.AnimationId = "rbxassetid://1150944216"
-															Animate.climb.ClimbAnim.AnimationId = "rbxassetid://1148811837"
-															Animate.fall.FallAnim.AnimationId = "rbxassetid://1148863382"
-															Animate.swim.Swim.AnimationId = "rbxassetid://1151204998"
-															Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://1151221899"
-end)
-
-Anims:Button("Princess", function()
-    Animate.idle.Animation1.AnimationId = "rbxassetid://941003647"
-																Animate.idle.Animation2.AnimationId = "rbxassetid://941013098"
-																Animate.run.RunAnim.AnimationId = "rbxassetid://941015281"
-																Animate.walk.WalkAnim.AnimationId = "rbxassetid://941028902"
-																Animate.jump.JumpAnim.AnimationId = "rbxassetid://941008832"
-																Animate.climb.ClimbAnim.AnimationId = "rbxassetid://940996062"
-																Animate.fall.FallAnim.AnimationId = "rbxassetid://941000007"
-																Animate.swim.Swim.AnimationId = "rbxassetid://941018893"
-																Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://941025398"
-end)
-
-Anims:Button("Sneaky", function()
-    Animate.idle.Animation1.AnimationId = "rbxassetid://1132473842"
-																				Animate.idle.Animation2.AnimationId = "rbxassetid://1132477671"
-																				Animate.run.RunAnim.AnimationId = "rbxassetid://1132494274"
-																				Animate.walk.WalkAnim.AnimationId = "rbxassetid://1132510133"
-																				Animate.jump.JumpAnim.AnimationId = "rbxassetid://1132489853"
-																				Animate.climb.ClimbAnim.AnimationId = "rbxassetid://1132461372"
-																				Animate.fall.FallAnim.AnimationId = "rbxassetid://1132469004"
-																				Animate.swim.Swim.AnimationId = "rbxassetid://1132500520"
-																				Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://1132506407"
-end)
-
-Anims:Button("Robot", function()
-    Animate.idle.Animation1.AnimationId = "rbxassetid://616088211"
-																	Animate.idle.Animation2.AnimationId = "rbxassetid://616089559"
-																	Animate.run.RunAnim.AnimationId = "rbxassetid://616091570"
-																	Animate.walk.WalkAnim.AnimationId = "rbxassetid://616095330"
-																	Animate.jump.JumpAnim.AnimationId = "rbxassetid://616090535"
-																	Animate.climb.ClimbAnim.AnimationId = "rbxassetid://616086039"
-																	Animate.fall.FallAnim.AnimationId = "rbxassetid://616087089"
-																	Animate.swim.Swim.AnimationId = "rbxassetid://616092998"
-																	Animate.swimidle.SwimIdle.AnimationId = "rbxassetid://616094091"
-end)
 
 Buttons:Button("Op script", function()
  
