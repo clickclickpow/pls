@@ -9,7 +9,6 @@ else
       game.Players.LocalPlayer:kick()
       
 
-	})
+	
 end
-
 
