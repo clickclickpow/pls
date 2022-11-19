@@ -1,0 +1,93 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local user = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local exe = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame.Position = UDim2.new(0.272096425, 0, 0.166514605, 0)
+Frame.Size = UDim2.new(0, 246, 0, 210)
+
+UICorner.Parent = Frame
+
+user.Name = "user"
+user.Parent = Frame
+user.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+user.Position = UDim2.new(0.032520324, 0, 0.193442628, 0)
+user.Size = UDim2.new(0, 200, 0, 50)
+user.Font = Enum.Font.Arial
+user.Text = "Username here.."
+user.TextColor3 = Color3.fromRGB(255, 255, 255)
+user.TextSize = 20.000
+
+UICorner_2.Parent = user
+
+exe.Name = "exe"
+exe.Parent = Frame
+exe.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+exe.Position = UDim2.new(0.0314335525, 0, 0.534228325, 0)
+exe.Size = UDim2.new(0, 200, 0, 50)
+exe.Font = Enum.Font.Arial
+exe.Text = "EXECUTE"
+exe.TextColor3 = Color3.fromRGB(255, 255, 255)
+exe.TextSize = 20.000
+exe.MouseButton1Click:Connect(function()
+	local trget = game.Players[user.Text]
+	local amnt = 43    -- 43 recommended
+
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame=trget.Character.HumanoidRootPart.CFrame;wait(0.2)local a=game:GetService("Players")local function b(c)return c:gsub("%s+","")or c end;local function d(c)c=b(c)for e,f in pairs(a:GetPlayers())do if f.Name:lower():match('^'..c:lower())then return f end end;return nil end;targetname=trget.Name;for g=1,1 do wait(0)local h={"heavy",1,game:GetService("Workspace")[targetname].Humanoid,game:GetService("Workspace")[targetname].HumanoidRootPart,game:GetService("Workspace")[targetname].Effects,game:GetService("Workspace")[targetname].RightHand,4,"explosion"}game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(h))end;wait(0.5)local a=game:GetService("Players")local function b(c)return c:gsub("%s+","")or c end;local function d(c)c=b(c)for e,f in pairs(a:GetPlayers())do if f.Name:lower():match('^'..c:lower())then return f end end;return nil end;targetname=trget.Name;for g=1,amnt do wait()local h={"slash",1,game:GetService("Workspace")[targetname].Humanoid,game:GetService("Workspace")[targetname].HumanoidRootPart,game:GetService("Workspace")[targetname].Effects,game:GetService("Workspace")[targetname].RightHand,2}game:GetService("ReplicatedStorage").Events.dmg:FireServer(unpack(h))end
+	
+end)
+
+UICorner_3.Parent = exe
+
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+close.Position = UDim2.new(0.893222213, 0, 0.881847262, 0)
+close.Size = UDim2.new(0, 26, 0, 24)
+close.Font = Enum.Font.Arial
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 20.000
+close.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
+end)
+
+UICorner_4.Parent = close
+
+-- Scripts:
+
+local function JTXNVOK_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	local Frame = script.Parent
+	
+	Frame.Active = true
+	Frame.Draggable = true
+end
+coroutine.wrap(JTXNVOK_fake_script)()
+
+
+user.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(user.Text))) == string.lower(user.Text) then
+			user.Text = v.Name
+		end
+	end
+end)
