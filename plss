@@ -1991,6 +1991,10 @@ game:GetService("ReplicatedStorage").Events.aura:FireServer(unpack(args))
 end
 end)
 
+Guis:Button("Fake chat", function() -- This is A Button
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/fakechat'))()
+end)
+
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
