@@ -1,0 +1,122 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local fake = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local user = Instance.new("TextBox")
+local UICorner_2 = Instance.new("UICorner")
+local msg = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local send = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local UICorner_5 = Instance.new("UICorner")
+local close = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+
+--Properties:
+
+fake.Name = "fake"
+fake.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+fake.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = fake
+Frame.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+Frame.Position = UDim2.new(0.252008766, 0, 0.278284669, 0)
+Frame.Size = UDim2.new(0, 380, 0, 363)
+
+UICorner.Parent = Frame
+
+user.Name = "user"
+user.Parent = Frame
+user.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+user.Position = UDim2.new(0.0342105255, 0, 0.132231399, 0)
+user.Size = UDim2.new(0, 339, 0, 51)
+user.Font = Enum.Font.Arial
+user.Text = ""
+user.TextColor3 = Color3.fromRGB(255, 255, 255)
+user.TextSize = 20.000
+
+UICorner_2.Parent = user
+
+msg.Name = "msg"
+msg.Parent = Frame
+msg.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+msg.Position = UDim2.new(0.0342105255, 0, 0.319559216, 0)
+msg.Size = UDim2.new(0, 339, 0, 51)
+msg.Font = Enum.Font.Arial
+msg.Text = "Message here.."
+msg.TextColor3 = Color3.fromRGB(255, 255, 255)
+msg.TextSize = 20.000
+
+UICorner_3.Parent = msg
+
+send.Name = "send"
+send.Parent = Frame
+send.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+send.Position = UDim2.new(0.21688132, 0, 0.542111576, 0)
+send.Size = UDim2.new(0, 200, 0, 50)
+send.Font = Enum.Font.Arial
+send.Text = "SEND"
+send.TextColor3 = Color3.fromRGB(255, 255, 255)
+send.TextSize = 20.000
+send.MouseButton1Click:Connect(function()
+	
+	local player = game.Players[user.Text]
+
+
+	
+	repeat wait() until player.Character
+	game:GetService("Chat"):Chat(player.Character.Head, msg.Text,"White")
+end)
+
+UICorner_4.Parent = send
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+TextLabel.Size = UDim2.new(0, 380, 0, 42)
+TextLabel.Font = Enum.Font.Arial
+TextLabel.Text = "Fake chat by zzotac"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 20.000
+
+UICorner_5.Parent = TextLabel
+
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
+close.Position = UDim2.new(0.945828736, 0, 0.947070241, 0)
+close.Size = UDim2.new(0, 20, 0, 19)
+close.Font = Enum.Font.Arial
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 20.000
+close.MouseButton1Click:Connect(function()
+	fake:Destroy()
+	
+end)
+
+UICorner_6.Parent = close
+
+-- Scripts:
+
+local function QBSRMY_fake_script() -- Frame.Script 
+	local script = Instance.new('Script', Frame)
+
+	local Frame = script.Parent
+	
+	Frame.Active = true
+	Frame.Draggable = true
+end
+coroutine.wrap(QBSRMY_fake_script)()
+
+user.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(user.Text))) == string.lower(user.Text) then
+			user.Text = v.Name
+		end
+	end
+end)
