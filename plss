@@ -555,7 +555,7 @@ game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFram
 		wait(0.01)
 
 	
-	game:GetService("Workspace").zzotac.HumanoidRootPart.Anchored = true
+	
 	
 
   local args = {
