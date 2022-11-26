@@ -1,8 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
-
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -41,7 +36,7 @@ local UICorner_17 = Instance.new("UICorner")
 local rab = Instance.new("TextLabel")
 local UICorner_18 = Instance.new("UICorner")
 
---Properties:
+
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -75,32 +70,32 @@ calculate.Text = "CALCULATE"
 calculate.TextColor3 = Color3.fromRGB(255, 255, 255)
 calculate.TextSize = 30.000
 calculate.MouseButton1Click:Connect(function()
-	local owna =  game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value 
-	local playa =   game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value*game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
-	local strength = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
-	local speed = game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value
-	local ki = game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value
-	local reb = game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
-	local combinedd = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
-
-	sam.Text = strength
-	spam.Text = speed
-	kam.Text = ki
-	rab.Text = reb
-	comb.Text = combinedd
-	powa.Text = playa
-	print(""..game.Players.LocalPlayer.Name .. " : " ..owna)
-	print(""..user.Text .. " : " ..playa)
-	if owna > playa then
-		sowos.Text = "Youre Stronger!"
-	end
-	if owna < playa then
-		sowos.Text = "Youre Weaker!"
-	end
-	if owna == playa then
-		sowos.Text = "Youre Equal!"
-	end
+    local owna =  game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value 
+    local playa =   game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value*game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+    local strength = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+    local speed = game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value
+    local ki = game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value
+    local reb = game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
+    local combinedd = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
+    sam.Text = strength
+    spam.Text = speed
+    kam.Text = ki
+    rab.Text = reb
+    comb.Text = combinedd
+    powa.Text = playa
+    print(""..game.Players.LocalPlayer.Name .. " : " ..owna)
+    print(""..user.Text .. " : " ..playa)
+    if owna > playa then
+        sowos.Text = "Youre Stronger!"
+    end
+    if owna < playa then
+        sowos.Text = "Youre Weaker!"
+    end
+        if owna == playa then
+            sowos.Text = "Youre Equal!"
+        end
 end)
+
 
 UICorner_3.Parent = calculate
 
@@ -331,3 +326,5 @@ game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 		end
 	end
 end)
+
+
