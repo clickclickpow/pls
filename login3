@@ -1,7 +1,7 @@
-local admins = {"zzotac", "Mihajlo42Savic", "ggerz2"}
+local admins = { "Mihajlo42Savic", "ggerz2"}
 local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
-local p2 = {"Nabz_121" , "Nabz_141"}
+local p2 = {"Nabz_121" , "Nabz_141", "zzotac"}
 local p3 = {"PRINCEVOU"}
 local p4 = {""}
 local grrtbow = game.Players.LocalPlayer.Name
@@ -12,7 +12,47 @@ if table.find(blacklist,grrtbow) then
 end
 
 if table.find(admins,grrtbow) then
-    print("Youre a admin , the login name for admins will always be admin.")
+    for i =  1,1 do
+    wait()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Youre a Admin"; 
+    Text = "Youre a admin , the login name for admins will always be admin.";
+    Duration = 5; 
+    })
+end
+end
+
+if table.find(p1,grrtbow) then
+    for i =  1,1 do
+    wait()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Login"; 
+    Text = "Youre password is : babe";
+    Duration = 5; 
+    })
+end
+end
+
+if table.find(p3,grrtbow) then
+    for i =  1,1 do
+    wait()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Login"; 
+    Text = "Your password is : nazi";
+    Duration = 5; 
+    })
+end
+end
+
+if table.find(p2,grrtbow) then
+    for i =  1,1 do
+    wait()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Login"; 
+    Text = "Your password is : gay";
+    Duration = 5; 
+    })
+end
 end
 
 local grrtbow = game.Players.LocalPlayer.Name
