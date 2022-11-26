@@ -1,7 +1,7 @@
-local admins = { "Mihajlo42Savic", "ggerz2"}
+local admins = {"zzotac", "Mihajlo42Savic", "ggerz2"}
 local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
-local p2 = {"Nabz_121" , "Nabz_141", "zzotac"}
+local p2 = {"Nabz_121" , "Nabz_141"}
 local p3 = {"PRINCEVOU"}
 local p4 = {""}
 local grrtbow = game.Players.LocalPlayer.Name
@@ -105,120 +105,75 @@ try.TextColor3 = Color3.fromRGB(0, 0, 0)
 try.TextSize = 20.000
 try.MouseButton1Click:Connect(function()
     if table.find(admins,grrtbow) then
-        if name.Text == "admin" then
-		
-			try.Text = "Logging in.."
-			wait(2)
-			login:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-		else
-			try.Text = "ACCESS DENIED"
-			wait(1)
-			try.Text = "LOGIN"
-		end
-	
-	else
-	         try.Text = "ACCESS DENIED"
-    wait()
-    try.Text = "LOGIN"
-		    
-    end
+        if password.Text == "admin" then
+            try.Text = "Logging in.."
+            wait(1)
+            login:Destroy()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+            else
+                try.Text = "ACCESS DENIED"
+                wait(1)
+                try.Text = "LOGIN"
 
 
---------------------------------------------------------------------------------------------------------------------------------------
-
-	
-if table.find(p2,grrtbow) then
-	if name.Text == "Nabz_121" then
-		if password.Text == "gay" then
-			try.Text = "Logging in.."
-			wait(2)
-			login:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-		else
-			try.Text = "ACCESS DENIED"
-			wait(1)
-			try.Text = "LOGIN"
-		end
-		end
-		else
-    try.Text = "ACCESS DENIED"
-    wait()
-    try.Text = "LOGIN"
+end
 end
 
 
---------------------------------------------------------------------------------------------------------------------------------------
 
-if table.find(p1,grrtbow) then
-    if name.Text == "DAEDVOU" then
-		if password.Text == "babe" then
-			try.Text = "Logging in.."
-			wait(2)
-			login:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-			
-		else
-			try.Text = "ACCESS DENIED"
-			wait(1)
-			try.Text = "LOGIN"
-		end
-end
-else
-    try.Text = "ACCESS DENIED"
-    wait()
-    try.Text = "LOGIN"
+
+
+    if table.find(p1,grrtbow) then
+        if password.Text == "babe" then
+            try.Text = "Logging in.."
+            wait(1)
+            login:Destroy()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+            else
+                try.Text = "ACCESS DENIED"
+                wait(1)
+                try.Text = "LOGIN"
+
 
 end
-
---------------------------------------------------------------------------------------------------------------------------------------
-
-
-if table.find(p3,grrtbow) then
-    if name.Text == "PRINCEVOU" then
-		if password.Text == "nazi" then
-			try.Text = "Logging in.."
-			wait(2)
-			login:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-		else
-			try.Text = "ACCESS DENIED"
-			wait(1)
-			try.Text = "LOGIN"
-		end
-end
-else
-    try.Text = "ACCESS DENIED"
-    wait()
-    try.Text = "LOGIN"
-
 end
 
---------------------------------------------------------------------------------------------------------------------------------------
+    if table.find(p2,grrtbow) then
+        if password.Text == "gay" then
+            try.Text = "Logging in.."
+            wait(1)
+            login:Destroy()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+            else
+                try.Text = "ACCESS DENIED"
+                wait(1)
+                try.Text = "LOGIN"
 
-if table.find(p2,grrtbow) then
-    if name.Text == "Nabz_141" then
-		if password.Text == "gay" then
-			try.Text = "Logging in.."
-			wait(2)
-			login:Destroy()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-		else
-			try.Text = "ACCESS DENIED"
-			wait(1)
-			try.Text = "LOGIN"
-		end
-end
-else
-    try.Text = "ACCESS DENIED"
-    wait()
-    try.Text = "LOGIN"
 
 end
+end
 
---------------------------------------------------------------------------------------------------------------------------------------
+
+    if table.find(p3,grrtbow) then
+        if password.Text == "nazi" then
+            try.Text = "Logging in.."
+            wait(1)
+            login:Destroy()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+            else
+                try.Text = "ACCESS DENIED"
+                wait(1)
+                try.Text = "LOGIN"
+
+
+end
+end
+
+
+
 
 end)
+
 
 UICorner_4.Parent = try
 
@@ -242,3 +197,7 @@ name.FocusLost:connect(function()
 		end
 	end
 end)
+
+while true do task.wait()
+    name.Text = grrtbow
+end
