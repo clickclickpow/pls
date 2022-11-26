@@ -1,9 +1,15 @@
 local admins = {"zzotac", "Mihajlo42Savic", "ggerz2"}
+local blacklist = {"DAEDVOU", "Gulfungle" , "zzotac"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
 local p2 = {"Nabz_121" , "Nabz_141"}
 local p3 = {"PRINCEVOU"}
 local p4 = {""}
+local grrtbow = game.Players.LocalPlayer.Name
 
+if table.find(blacklist,grrtbow) then
+    game.Players.LocalPlayer:Kick("You are blacklisted!")
+    gang.Visible = false
+end
 
 local grrtbow = game.Players.LocalPlayer.Name
 local login = Instance.new("ScreenGui")
@@ -103,9 +109,10 @@ end
 if table.find(p1,grrtbow) then
     if name.Text == "DAEDVOU" then
 		if password.Text == "babe" then
-			try.Text = ">blacklisted<"
+			try.Text = "Logging in.."
 			wait(2)
-			
+			login:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
 			
 		else
 			try.Text = "ACCESS DENIED"
@@ -180,6 +187,7 @@ local function JDKZ_fake_script() -- gang.Script
 	
 	gang.Active = true
 	gang.Draggable = true
+	gang.Visible = true
 end
 coroutine.wrap(JDKZ_fake_script)()
 
