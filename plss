@@ -1861,7 +1861,7 @@ game:GetService("ReplicatedStorage").Events.volley:FireServer(unpack(args))
 
 end)
 Guis:Button("Kill Gui", function() -- This is A Button
-loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/main/kg'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/kill'))()
 end)
 
 Guis:Button("Python age calculator", function() -- This is A Button
@@ -1916,7 +1916,7 @@ Buttons:Button("Remove face", function() -- This is A Button
   end)
   
 Guis:Button("Goku slash", function() -- This is A Button
-loadstring(game:HttpGet('https://raw.githubusercontent.com/oppswisser/zzotac/main/goku'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/gokumui'))()
 end)
 
 
