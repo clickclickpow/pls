@@ -1,7 +1,4 @@
--- Gui to Lua
--- Version: 3.2
 
--- Instances:
 
 local login = Instance.new("ScreenGui")
 local gang = Instance.new("Frame")
@@ -13,7 +10,7 @@ local UICorner_3 = Instance.new("UICorner")
 local try = Instance.new("TextButton")
 local UICorner_4 = Instance.new("UICorner")
 
---Properties:
+
 
 login.Name = "login"
 login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -76,9 +73,10 @@ try.MouseButton1Click:Connect(function()
 		end
 	end
 	else
-	     try.Text = "No permission."
-		    wait(2)
-		    try.Text = "LOGIN"
+	         try.Text = "ACCESS DENIED"
+    wait(2)
+    try.Text = "LOGIN"
+		    
     end
 
 
@@ -99,9 +97,9 @@ try.MouseButton1Click:Connect(function()
 		end
 		end
 		else
-		    try.Text = "No permission."
-		    wait(2)
-		    try.Text = "LOGIN"
+    try.Text = "ACCESS DENIED"
+    wait(2)
+    try.Text = "LOGIN"
 end
 
 
@@ -121,9 +119,10 @@ if name.Text == "DAEDVOU" then
 		end
 end
 else
-     try.Text = "No permission."
-		    wait(2)
-		    try.Text = "LOGIN"
+    try.Text = "ACCESS DENIED"
+    wait(2)
+    try.Text = "LOGIN"
+
 end
 
 --------------------------------------------------------------------------------------------------------------------------------------
