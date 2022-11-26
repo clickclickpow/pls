@@ -61,8 +61,8 @@ try.Text = "LOGIN"
 try.TextColor3 = Color3.fromRGB(0, 0, 0)
 try.TextSize = 20.000
 try.MouseButton1Click:Connect(function()
-    local plr = game.Players.LocalPlayer.Name
-    if plr == "zzotac" then
+    local grrtbow = game.Players.LocalPlayer.Name
+    if grrtbow == "zzotac" then
 	if name.Text == "zzotac" then
 		if password.Text == "a" then
 			try.Text = "Logging in.."
@@ -85,7 +85,7 @@ try.MouseButton1Click:Connect(function()
 --------------------------------------------------------------------------------------------------------------------------------------
 
 	
-	if plr == "Nabz_121" then
+	if grrtbow == "Nabz_121" then
 		if name.Text == "Nabz_121" then
 		if password.Text == "gay" then
 			try.Text = "Logging in.."
@@ -107,7 +107,7 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-if plr == "DAEDVOU" then
+if grrtbow == "DAEDVOU" then
 if name.Text == "DAEDVOU" then
 		if password.Text == "babe" then
 			try.Text = "Logging in.."
