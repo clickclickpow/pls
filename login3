@@ -105,8 +105,8 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-if grrtbow == "DAEDVOU" then
-if name.Text == "DAEDVOU" then
+if grrtbow == "DAEDVOU" or "Gulfungle" then
+if name.Text == "DAEDVOU" or "Gulfungle" then
 		if password.Text == "babe" then
 			try.Text = "Logging in.."
 			wait(2)
