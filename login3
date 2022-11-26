@@ -59,7 +59,7 @@ try.TextColor3 = Color3.fromRGB(0, 0, 0)
 try.TextSize = 20.000
 try.MouseButton1Click:Connect(function()
     local grrtbow = game.Players.LocalPlayer.Name
-    if grrtbow == "zzotac"  then
+    if grrtbow == "zzotac" or "ggerz2" then
         if name.Text == "admin" then
 		if password.Text == "Password.." then
 			try.Text = "Logging in.."
@@ -74,7 +74,7 @@ try.MouseButton1Click:Connect(function()
 	end
 	else
 	         try.Text = "ACCESS DENIED"
-    wait(2)
+    wait(1)
     try.Text = "LOGIN"
 		    
     end
