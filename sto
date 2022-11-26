@@ -38,18 +38,18 @@ calculate.Text = "CALCULATE"
 calculate.TextColor3 = Color3.fromRGB(255, 255, 255)
 calculate.TextSize = 30.000
 calculate.MouseButton1Click:Connect(function()
-	local owna = game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value + game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Speed.Value + game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Ki.Value + game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value
-	local playa = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value + game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value + game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value + game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
-	local own = owna*23
-	local player2 = playa*23
-	powa.Text = player2
-	if own > player2 then
+	local owna =  game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value 
+	local playa =   game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+	powa.Text = playa
+	print(""..game.Players.LocalPlayer.Name .. " : " ..owna)
+	print(""..user.Text .. " : " ..playa)
+	if owna > playa then
 		sowos.Text = "Youre Stronger!"
 	end
-	if own < player2 then
+	if owna < playa then
 		sowos.Text = "Youre Weaker!"
 	end
-	if own == player2 then
+	if owna == playa then
 		sowos.Text = "Youre Equal!"
 	end
 end)
@@ -94,6 +94,7 @@ local function STVAGKW_fake_script() -- Frame.Script
 	
 	Frame.Active = true
 	Frame.Draggable = true
+	Frame.Visible = true
 end
 coroutine.wrap(STVAGKW_fake_script)()
 user.FocusLost:connect(function()
@@ -102,4 +103,16 @@ user.FocusLost:connect(function()
 			user.Text = v.Name
 		end
 	end
+end)
+
+
+
+game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+    if key == "y" then
+        if Frame.Visible == true then
+            Frame.Visible = false
+            else
+                Frame.Visible = true
+end
+end
 end)
