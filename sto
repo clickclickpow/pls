@@ -1,3 +1,8 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -11,23 +16,55 @@ local powa = Instance.new("TextLabel")
 local UICorner_5 = Instance.new("UICorner")
 local lvl = Instance.new("TextLabel")
 local UICorner_6 = Instance.new("UICorner")
+local see = Instance.new("TextLabel")
+local UICorner_7 = Instance.new("UICorner")
+local second = Instance.new("Frame")
+local UICorner_8 = Instance.new("UICorner")
+local STR = Instance.new("TextLabel")
+local UICorner_9 = Instance.new("UICorner")
+local SPEED = Instance.new("TextLabel")
+local UICorner_10 = Instance.new("UICorner")
+local KI = Instance.new("TextLabel")
+local UICorner_11 = Instance.new("UICorner")
+local REBIRTHS = Instance.new("TextLabel")
+local UICorner_12 = Instance.new("UICorner")
+local combined = Instance.new("TextLabel")
+local UICorner_13 = Instance.new("UICorner")
+local comb = Instance.new("TextLabel")
+local UICorner_14 = Instance.new("UICorner")
+local sam = Instance.new("TextLabel")
+local UICorner_15 = Instance.new("UICorner")
+local spam = Instance.new("TextLabel")
+local UICorner_16 = Instance.new("UICorner")
+local kam = Instance.new("TextLabel")
+local UICorner_17 = Instance.new("UICorner")
+local rab = Instance.new("TextLabel")
+local UICorner_18 = Instance.new("UICorner")
+
+--Properties:
+
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
 Frame.Position = UDim2.new(0.0164662078, 0, 0.0604470819, 0)
 Frame.Size = UDim2.new(0, 359, 0, 403)
+
 UICorner.Parent = Frame
+
 user.Name = "user"
 user.Parent = Frame
 user.BackgroundColor3 = Color3.fromRGB(177, 145, 51)
 user.Position = UDim2.new(0.0209764577, 0, 0.134493455, 0)
 user.Size = UDim2.new(0, 322, 0, 50)
 user.Font = Enum.Font.Arial
-user.Text = "Player.."
+user.Text = ""
 user.TextColor3 = Color3.fromRGB(255, 255, 255)
 user.TextSize = 25.000
+
 UICorner_2.Parent = user
+
 calculate.Name = "calculate"
 calculate.Parent = Frame
 calculate.BackgroundColor3 = Color3.fromRGB(177, 145, 51)
@@ -39,7 +76,18 @@ calculate.TextColor3 = Color3.fromRGB(255, 255, 255)
 calculate.TextSize = 30.000
 calculate.MouseButton1Click:Connect(function()
 	local owna =  game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value 
-	local playa =   game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Strength.Value*game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+	local playa =   game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value*game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value/10+game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+	local strength = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value
+	local speed = game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value
+	local ki = game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value
+	local reb = game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
+	local combinedd = game:GetService("ReplicatedStorage").Datas[user.Text].Strength.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Speed.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Ki.Value+game:GetService("ReplicatedStorage").Datas[user.Text].Rebirth.Value
+
+	sam.Text = strength
+	spam.Text = speed
+	kam.Text = ki
+	rab.Text = reb
+	comb.Text = combinedd
 	powa.Text = playa
 	print(""..game.Players.LocalPlayer.Name .. " : " ..owna)
 	print(""..user.Text .. " : " ..playa)
@@ -53,7 +101,9 @@ calculate.MouseButton1Click:Connect(function()
 		sowos.Text = "Youre Equal!"
 	end
 end)
+
 UICorner_3.Parent = calculate
+
 sowos.Name = "sowos"
 sowos.Parent = Frame
 sowos.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
@@ -64,7 +114,9 @@ sowos.Text = "nil"
 sowos.TextColor3 = Color3.fromRGB(235, 255, 10)
 sowos.TextSize = 40.000
 sowos.TextXAlignment = Enum.TextXAlignment.Left
+
 UICorner_4.Parent = sowos
+
 powa.Name = "powa"
 powa.Parent = Frame
 powa.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
@@ -75,7 +127,9 @@ powa.Text = "nil"
 powa.TextColor3 = Color3.fromRGB(255, 0, 0)
 powa.TextSize = 40.000
 powa.TextXAlignment = Enum.TextXAlignment.Left
+
 UICorner_5.Parent = powa
+
 lvl.Name = "lvl"
 lvl.Parent = Frame
 lvl.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
@@ -86,17 +140,180 @@ lvl.Text = "POWERLVL :"
 lvl.TextColor3 = Color3.fromRGB(255, 255, 255)
 lvl.TextSize = 30.000
 lvl.TextXAlignment = Enum.TextXAlignment.Left
+
 UICorner_6.Parent = lvl
-local function STVAGKW_fake_script() -- Frame.Script 
+
+see.Name = "see"
+see.Parent = Frame
+see.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+see.Position = UDim2.new(0.0447014496, 0, 0.00987166166, 0)
+see.Size = UDim2.new(0, 313, 0, 50)
+see.Font = Enum.Font.Arial
+see.Text = "J to see their stats."
+see.TextColor3 = Color3.fromRGB(255, 255, 26)
+see.TextSize = 30.000
+
+UICorner_7.Parent = see
+
+second.Name = "second"
+second.Parent = ScreenGui
+second.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+second.Position = UDim2.new(0.302119106, 0, 0.0672901496, 0)
+second.Size = UDim2.new(0, 358, 0, 334)
+
+UICorner_8.Parent = second
+
+STR.Name = "STR"
+STR.Parent = second
+STR.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+STR.Position = UDim2.new(0.022234302, 0, 0.0652138889, 0)
+STR.Size = UDim2.new(0, 199, 0, 50)
+STR.Font = Enum.Font.Arial
+STR.Text = "Strength :"
+STR.TextColor3 = Color3.fromRGB(255, 255, 255)
+STR.TextSize = 20.000
+STR.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_9.Parent = STR
+
+SPEED.Name = "SPEED"
+SPEED.Parent = second
+SPEED.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+SPEED.Position = UDim2.new(0.022234302, 0, 0.167551398, 0)
+SPEED.Size = UDim2.new(0, 199, 0, 50)
+SPEED.Font = Enum.Font.Arial
+SPEED.Text = "Speed :"
+SPEED.TextColor3 = Color3.fromRGB(255, 255, 255)
+SPEED.TextSize = 20.000
+SPEED.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_10.Parent = SPEED
+
+KI.Name = "KI"
+KI.Parent = second
+KI.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+KI.Position = UDim2.new(0.022234302, 0, 0.270465612, 0)
+KI.Size = UDim2.new(0, 199, 0, 50)
+KI.Font = Enum.Font.Arial
+KI.Text = "Ki :"
+KI.TextColor3 = Color3.fromRGB(255, 255, 255)
+KI.TextSize = 20.000
+KI.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_11.Parent = KI
+
+REBIRTHS.Name = "REBIRTHS"
+REBIRTHS.Parent = second
+REBIRTHS.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+REBIRTHS.Position = UDim2.new(0.022234302, 0, 0.388675302, 0)
+REBIRTHS.Size = UDim2.new(0, 199, 0, 50)
+REBIRTHS.Font = Enum.Font.Arial
+REBIRTHS.Text = "Rebirths :"
+REBIRTHS.TextColor3 = Color3.fromRGB(255, 255, 255)
+REBIRTHS.TextSize = 20.000
+REBIRTHS.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_12.Parent = REBIRTHS
+
+combined.Name = "combined"
+combined.Parent = second
+combined.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+combined.Position = UDim2.new(0.184245482, 0, 0.589274108, 0)
+combined.Size = UDim2.new(0, 199, 0, 50)
+combined.Font = Enum.Font.Arial
+combined.Text = "COMBINED :"
+combined.TextColor3 = Color3.fromRGB(255, 255, 255)
+combined.TextSize = 30.000
+combined.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_13.Parent = combined
+
+comb.Name = "comb"
+comb.Parent = second
+comb.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+comb.Position = UDim2.new(0.0196395889, 0, 0.735522091, 0)
+comb.Size = UDim2.new(0, 313, 0, 50)
+comb.Font = Enum.Font.Arial
+comb.Text = "nil"
+comb.TextColor3 = Color3.fromRGB(255, 0, 0)
+comb.TextSize = 40.000
+
+UICorner_14.Parent = comb
+
+sam.Name = "sam"
+sam.Parent = second
+sam.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+sam.Position = UDim2.new(0.273829639, 0, 0.0648633763, 0)
+sam.Size = UDim2.new(0, 259, 0, 50)
+sam.Font = Enum.Font.Arial
+sam.Text = "nil"
+sam.TextColor3 = Color3.fromRGB(255, 0, 0)
+sam.TextSize = 20.000
+sam.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_15.Parent = sam
+
+spam.Name = "spam"
+spam.Parent = second
+spam.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+spam.Position = UDim2.new(0.273829579, 0, 0.226539969, 0)
+spam.Size = UDim2.new(0, 24, 0, 14)
+spam.Font = Enum.Font.Arial
+spam.Text = "nil"
+spam.TextColor3 = Color3.fromRGB(255, 0, 0)
+spam.TextSize = 20.000
+spam.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_16.Parent = spam
+
+kam.Name = "kam"
+kam.Parent = second
+kam.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+kam.Position = UDim2.new(0.273829639, 0, 0.322348356, 0)
+kam.Size = UDim2.new(0, 24, 0, 14)
+kam.Font = Enum.Font.Arial
+kam.Text = "nil"
+kam.TextColor3 = Color3.fromRGB(255, 0, 0)
+kam.TextSize = 20.000
+kam.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_17.Parent = kam
+
+rab.Name = "rab"
+rab.Parent = second
+rab.BackgroundColor3 = Color3.fromRGB(33, 85, 45)
+rab.Position = UDim2.new(0.273829579, 0, 0.44210881, 0)
+rab.Size = UDim2.new(0, 24, 0, 14)
+rab.Font = Enum.Font.Arial
+rab.Text = "nil"
+rab.TextColor3 = Color3.fromRGB(255, 0, 0)
+rab.TextSize = 20.000
+rab.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_18.Parent = rab
+
+-- Scripts:
+
+local function KNSREV_fake_script() -- Frame.Script 
 	local script = Instance.new('Script', Frame)
 
 	local Frame = script.Parent
 	
 	Frame.Active = true
 	Frame.Draggable = true
-	Frame.Visible = true
 end
-coroutine.wrap(STVAGKW_fake_script)()
+coroutine.wrap(KNSREV_fake_script)()
+local function OHNG_fake_script() -- second.Script 
+	local script = Instance.new('Script', second)
+
+	local second = script.Parent
+	
+	second.Active = true
+	second.Draggable = true
+	second.Visible = false
+end
+coroutine.wrap(OHNG_fake_script)()
+
 user.FocusLost:connect(function()
 	for i,v in pairs(game.Players:GetChildren()) do
 		if (string.sub(string.lower(v.Name),1,string.len(user.Text))) == string.lower(user.Text) then
@@ -105,14 +322,12 @@ user.FocusLost:connect(function()
 	end
 end)
 
-
-
 game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
-    if key == "y" then
-        if Frame.Visible == true then
-            Frame.Visible = false
-            else
-                Frame.Visible = true
-end
-end
+	if key == "j" then
+		if second.Visible == true then
+			second.Visible = false
+		else
+			second.Visible = true
+		end
+	end
 end)
