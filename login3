@@ -5,8 +5,10 @@ local p2 = {"Nabz_121" , "Nabz_141"}
 local p3 = {"PRINCEVOU"}
 local p4 = {""}
 local grrtbow = game.Players.LocalPlayer.Name
+
 if table.find(blacklist,grrtbow) then
-    break
+    game.Players.LocalPlayer:Kick:("Youre blacklisted!")
+    gang.Visible = false
 end
 
 local grrtbow = game.Players.LocalPlayer.Name
@@ -185,6 +187,7 @@ local function JDKZ_fake_script() -- gang.Script
 	
 	gang.Active = true
 	gang.Draggable = true
+	gang.Visible = true
 end
 coroutine.wrap(JDKZ_fake_script)()
 
