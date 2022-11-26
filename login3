@@ -1,5 +1,5 @@
 local admins = { "Mihajlo42Savic", "ggerz2"}
-local owna = {"zzotac"}
+local ownas = {"zzotac"}
 local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou"}
 local check = {"Mihajlo42Savic", "zzotac", "Nabz_121", "Nabz_141", "PRINCEVOU", "ggerz2"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
@@ -8,7 +8,7 @@ local p3 = {"PRINCEVOU"}
 local p4 = {""}
 local grrtbow = game.Players.LocalPlayer.Name
 
-if table.find(owna,grrtbow) then
+if table.find(ownas,grrtbow) then
     for i =  1,1 do
     wait()
     game.StarterGui:SetCore("SendNotification", {
