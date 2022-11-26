@@ -11,6 +11,10 @@ if table.find(blacklist,grrtbow) then
     gang.Visible = false
 end
 
+if table.find(admins,grrtbow) then
+    print("Youre a admin , the login name for admins will always be admin.")
+end
+
 local grrtbow = game.Players.LocalPlayer.Name
 local login = Instance.new("ScreenGui")
 local gang = Instance.new("Frame")
