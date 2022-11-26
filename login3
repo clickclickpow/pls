@@ -150,6 +150,27 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+if grrtbow == "Nabz_141" then
+if name.Text == "Nabz_141" then
+		if password.Text == "gay" then
+			try.Text = "Logging in.."
+			wait(2)
+			login:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+		else
+			try.Text = "wrong password"
+			wait(2)
+			try.Text = "LOGIN"
+		end
+end
+else
+    try.Text = "ACCESS DENIED"
+    wait(2)
+    try.Text = "LOGIN"
+
+end
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 end)
 
