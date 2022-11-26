@@ -1,3 +1,11 @@
+local admins = {"zzotac", "Mihajlo42Savic", "ggerz2"}
+local p1 = {"DAEDVOU" , "Gulfungle"}
+local p2 = {"Nabz_121" , "Nabz_141"}
+local p3 = {"PRINCEVOU"}
+local p4 = {""}
+
+
+local grrtbow = game.Players.LocalPlayer.Name
 local login = Instance.new("ScreenGui")
 local gang = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -46,8 +54,7 @@ try.Text = "LOGIN"
 try.TextColor3 = Color3.fromRGB(0, 0, 0)
 try.TextSize = 20.000
 try.MouseButton1Click:Connect(function()
-    local grrtbow = game.Players.LocalPlayer.Name
-    if grrtbow == "zzotac" or "ggerz2" then
+    if table.find(admins,grrtbow) then
         if name.Text == "admin" then
 		
 			try.Text = "Logging in.."
@@ -71,7 +78,7 @@ try.MouseButton1Click:Connect(function()
 --------------------------------------------------------------------------------------------------------------------------------------
 
 	
-if grrtbow == "Nabz_121" then
+if table.find(p2,grrtbow) then
 	if name.Text == "Nabz_121" then
 		if password.Text == "gay" then
 			try.Text = "Logging in.."
@@ -93,7 +100,7 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-if grrtbow == "DAEDVOU" or "Gulfungle" then
+if table.find(p1,grrtbow) then
     if name.Text == "DAEDVOU" then
 		if password.Text == "babe" then
 			try.Text = ">blacklisted<"
@@ -116,7 +123,7 @@ end
 --------------------------------------------------------------------------------------------------------------------------------------
 
 
-if grrtbow == "PRINCEVOU" then
+if table.find(p3,grrtbow) then
     if name.Text == "PRINCEVOU" then
 		if password.Text == "nazi" then
 			try.Text = "Logging in.."
@@ -138,7 +145,7 @@ end
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-if grrtbow == "Nabz_141" then
+if table.find(p2,grrtbow) then
     if name.Text == "Nabz_141" then
 		if password.Text == "gay" then
 			try.Text = "Logging in.."
