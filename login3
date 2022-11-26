@@ -61,7 +61,7 @@ try.MouseButton1Click:Connect(function()
     local grrtbow = game.Players.LocalPlayer.Name
     if grrtbow == "zzotac" or "ggerz2" then
         if name.Text == "admin" then
-		if password.Text == "Password.." then
+		
 			try.Text = "Logging in.."
 			wait(2)
 			login:Destroy()
@@ -71,7 +71,7 @@ try.MouseButton1Click:Connect(function()
 			wait(2)
 			try.Text = "LOGIN"
 		end
-	end
+	
 	else
 	         try.Text = "ACCESS DENIED"
     wait(1)
