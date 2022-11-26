@@ -1,71 +1,154 @@
 -- Gui to Lua
 -- Version: 3.2
 
--- Instasnces: 
+-- Instances:
 
-local Login = Instance.new("ScreenGui")
-local Grah = Instance.new("Frame")
+local login = Instance.new("ScreenGui")
+local gang = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
-local password = Instance.new("TextBox")
+local name = Instance.new("TextBox")
 local UICorner_2 = Instance.new("UICorner")
-local Log = Instance.new("TextButton")
+local password = Instance.new("TextBox")
 local UICorner_3 = Instance.new("UICorner")
+local try = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
 
 --Properties:
 
-Login.Name = "Login"
-Login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+login.Name = "login"
+login.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+login.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-Grah.Name = "Grah"
-Grah.Parent = Login
-Grah.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-Grah.Position = UDim2.new(0.263926953, 0, 0.284580499, 0)
-Grah.Size = UDim2.new(0, 338, 0, 147)
+gang.Name = "gang"
+gang.Parent = login
+gang.BackgroundColor3 = Color3.fromRGB(89, 48, 125)
+gang.Position = UDim2.new(0.291380286, 0, 0.220118612, 0)
+gang.Size = UDim2.new(0, 420, 0, 239)
 
-UICorner.Parent = Grah
+UICorner.Parent = gang
+
+name.Name = "name"
+name.Parent = gang
+name.BackgroundColor3 = Color3.fromRGB(151, 161, 57)
+name.Position = UDim2.new(0.0976190493, 0, 0.0836820081, 0)
+name.Size = UDim2.new(0, 337, 0, 50)
+name.Font = Enum.Font.Arial
+name.Text = "Username.."
+name.TextColor3 = Color3.fromRGB(0, 0, 0)
+name.TextSize = 20.000
+
+UICorner_2.Parent = name
 
 password.Name = "password"
-password.Parent = Grah
-password.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-password.Position = UDim2.new(0.204142004, 0, 0.108843535, 0)
-password.Size = UDim2.new(0, 200, 0, 50)
+password.Parent = gang
+password.BackgroundColor3 = Color3.fromRGB(151, 161, 57)
+password.Position = UDim2.new(0.0976190493, 0, 0.393305451, 0)
+password.Size = UDim2.new(0, 337, 0, 50)
 password.Font = Enum.Font.Arial
-password.Text = "password..."
-password.TextColor3 = Color3.fromRGB(255, 255, 255)
+password.Text = "Password.."
+password.TextColor3 = Color3.fromRGB(0, 0, 0)
 password.TextSize = 20.000
 
-UICorner_2.Parent = password
+UICorner_3.Parent = password
 
-Log.Name = "Log"
-Log.Parent = Grah
-Log.BackgroundColor3 = Color3.fromRGB(61, 61, 61)
-Log.Position = UDim2.new(0.204142019, 0, 0.571428597, 0)
-Log.Size = UDim2.new(0, 200, 0, 44)
-Log.Font = Enum.Font.Arial
-Log.Text = "LOGIN"
-Log.TextColor3 = Color3.fromRGB(255, 255, 255)
-Log.TextSize = 23.000
-Log.MouseButton1Click:Connect(function()
-	if password.Text == "noob" then
-		Login:Destroy()
-		loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
-
-	else
-		
+try.Name = "try"
+try.Parent = gang
+try.BackgroundColor3 = Color3.fromRGB(151, 161, 57)
+try.Position = UDim2.new(0.235714287, 0, 0.711297095, 0)
+try.Size = UDim2.new(0, 200, 0, 50)
+try.Font = Enum.Font.Arial
+try.Text = "LOGIN"
+try.TextColor3 = Color3.fromRGB(0, 0, 0)
+try.TextSize = 20.000
+try.MouseButton1Click:Connect(function()
+    local plr = game.Players.LocalPlayer.Name
+    if plr == "zzotac" then
+	if name.Text == "zzotac" then
+		if password.Text == "a" then
+			try.Text = "Logging in.."
+			wait(2)
+			login:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+		else
+			try.Text = "wrong password"
+			wait(2)
+			try.Text = "LOGIN"
+		end
 	end
+	else
+	     try.Text = "No permission."
+		    wait(2)
+		    try.Text = "LOGIN"
+    end
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+	
+	if plr == "Nabz_121" then
+		if name.Text == "Nabz_121" then
+		if password.Text == "gay" then
+			try.Text = "Logging in.."
+			wait(2)
+			login:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+		else
+			try.Text = "wrong password"
+			wait(2)
+			try.Text = "LOGIN"
+		end
+		end
+		else
+		    try.Text = "No permission."
+		    wait(2)
+		    try.Text = "LOGIN"
+end
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+if plr == "DAEDVOU" then
+if name.Text == "DAEDVOU" then
+		if password.Text == "babe" then
+			try.Text = "Logging in.."
+			wait(2)
+			login:Destroy()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+		else
+			try.Text = "wrong password"
+			wait(2)
+			try.Text = "LOGIN"
+		end
+end
+else
+     try.Text = "No permission."
+		    wait(2)
+		    try.Text = "LOGIN"
+end
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
 end)
 
-UICorner_3.Parent = Log
+UICorner_4.Parent = try
 
 -- Scripts:
 
-local function JZCH_fake_script() -- Grah.Script 
-	local script = Instance.new('Script', Grah)
+local function JDKZ_fake_script() -- gang.Script 
+	local script = Instance.new('Script', gang)
 
-	local Grah = script.Parent
+	local gang = script.Parent
 	
-	Grah.Active = true
-	Grah.Draggable = true
+	gang.Active = true
+	gang.Draggable = true
 end
-coroutine.wrap(JZCH_fake_script)()
+coroutine.wrap(JDKZ_fake_script)()
+
+name.FocusLost:connect(function()
+	for i,v in pairs(game.Players:GetChildren()) do
+		if (string.sub(string.lower(v.Name),1,string.len(name.Text))) == string.lower(name.Text) then
+			name.Text = v.Name
+		end
+	end
+end)
