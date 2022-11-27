@@ -3,13 +3,25 @@ game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 	   loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/skrt/main/pwall'))()
 	   game.StarterGui:SetCore("SendNotification", {
     Title = "Made by zzotac"; 
-    Text = "Done";
+    Text = "Heavy";
     Duration = 5; 
     })
 end
 end)
+
+game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
+	if key == "-" then
+	   loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/skrt/main/grt'))()
+	   game.StarterGui:SetCore("SendNotification", {
+    Title = "Made by zzotac"; 
+    Text = "Slash";
+    Duration = 5; 
+    })
+end
+end)
+
 game.StarterGui:SetCore("SendNotification", {
     Title = "made by zzotac"; 
-    Text = "Press = to bring poeple near you ";
+    Text = "Press = to bring poeple near you or - to slash them. ";
     Duration = 5; 
     })
