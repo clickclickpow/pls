@@ -1,0 +1,49 @@
+                   game.StarterGui:SetCore("SendNotification", {
+                    Title = "Made by zzotac"; 
+                    Text = ".aura to activate , .off to disable.";
+                    Duration = 1; 
+                    })
+
+local Players = game:GetService("Players")
+local playur = "zzotac"
+local gang = game.Players.LocalPlayer.Name
+local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
+_G.aura = false
+
+	event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+		if click.FromSpeaker == playur then
+			if click.Message == ".aura" then
+			    game.StarterGui:SetCore("SendNotification", {
+                    Title = "Kill aura"; 
+                    Text = "Kill aura has been activated";
+                    Duration = 5; 
+                    })
+				_G.aura = true
+				repeat wait(0.2)
+				    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/killaura'))()
+				until _G.aura == false
+				 
+                    
+
+				
+
+			end
+		end
+	end)
+	
+		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+		if click.FromSpeaker == playur then
+			if click.Message == ".off" then
+				_G.aura = false
+				                   game.StarterGui:SetCore("SendNotification", {
+                    Title = "Kill aura"; 
+                    Text = "Kill aura has been disabled";
+                    Duration = 5; 
+                    })
+				
+				    
+				
+
+			end
+		end
+	end)
