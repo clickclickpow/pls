@@ -32,14 +32,6 @@ local Train = Win:Tab("Training") -- This Creates a Tab on the left Side
 
 
 
-wait()
-game.StarterGui:SetCore("SendNotification", {
-Title = "made by zzotac"; -- the title (ofc)
-Text = "22Gz 22Gz 22Gz 22Gz 22Gz wip "; -- what the text says (ofc)
-Icon = "rbxassetid://11466021138"; -- the image if u want. 
-Duration = 5; -- how long the notification should in secounds
-})
-
 Toggles:Toggle("Forms", false,function(t) -- This is A Toggle
 hi = t
    while hi do task.wait()
