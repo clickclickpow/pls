@@ -12,7 +12,7 @@ if table.find(ownas,grrtbow) then
     for i =  1,1 do
     wait()
     game.StarterGui:SetCore("SendNotification", {
-    Title = "Youre a the owner"; 
+    Title = "Your rank : Owner"; 
     Text = "Bypasses password";
     Duration = 5; 
     })
@@ -41,7 +41,7 @@ if table.find(admins,grrtbow) then
     for i =  1,1 do
     wait()
     game.StarterGui:SetCore("SendNotification", {
-    Title = "Youre a Admin"; 
+    Title = "Your rank : Admin"; 
     Text = "Youre a admin , the login name for admins will always be admin.";
     Duration = 5; 
     })
