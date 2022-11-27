@@ -1,12 +1,26 @@
 local admins = {"ggerz2"}
-local ownas = {"Mihajlo42Savic"}
-local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou", "zzotac"}
+local ownas = {"zzotac"}
+local co = {"Mihajlo42Savic"}
+local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou"}
 local check = {"Mihajlo42Savic", "zzotac", "Nabz_121", "Nabz_141", "PRINCEVOU", "ggerz2"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
 local p2 = {"Nabz_121" , "Nabz_141"}
 local p3 = {"PRINCEVOU"}
 local p4 = {""}
 local grrtbow = game.Players.LocalPlayer.Name
+
+if table.find(co,grrtbow) then
+       for i =  1,1 do
+    wait()
+    game.StarterGui:SetCore("SendNotification", {
+    Title = "Your rank : Co-Owner"; 
+    Text = "Bypasses password";
+    Duration = 5; 
+    })
+end
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
+end
+
 
 if table.find(ownas,grrtbow) then
     for i =  1,1 do
@@ -42,7 +56,7 @@ if table.find(admins,grrtbow) then
     wait()
     game.StarterGui:SetCore("SendNotification", {
     Title = "Your rank : Admin"; 
-    Text = "Youre a admin , the login name for admins will always be admin.";
+    Text = "Youre a admin , the password for admins will always be admin.";
     Duration = 5; 
     })
 end
