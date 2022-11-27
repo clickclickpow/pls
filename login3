@@ -1,5 +1,5 @@
-local admins = { "Mihajlo42Savic", "ggerz2"}
-local ownas = {"zzotac"}
+local admins = {"ggerz2"}
+local ownas = {"zzotac", "Mihajlo42Savic"}
 local blacklist = {"DAEDVOU", "Gulfungle" , "GxdBreaker", "deadvou"}
 local check = {"Mihajlo42Savic", "zzotac", "Nabz_121", "Nabz_141", "PRINCEVOU", "ggerz2"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
