@@ -4,7 +4,7 @@ game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 	   game.StarterGui:SetCore("SendNotification", {
     Title = "Made by zzotac"; 
     Text = "Heavy";
-    Duration = 5; 
+    Duration = 1	; 
     })
 end
 end)
@@ -15,7 +15,7 @@ game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 	   game.StarterGui:SetCore("SendNotification", {
     Title = "Made by zzotac"; 
     Text = "Slash";
-    Duration = 5; 
+    Duration = 1; 
     })
 end
 end)
