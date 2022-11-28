@@ -1,21 +1,24 @@
                    game.StarterGui:SetCore("SendNotification", {
                     Title = "Made by zzotac"; 
-                    Text = ".on to activate , .off to disable.";
-                    Duration = 1; 
+                    Text = ".print to see the commands.";
+                    Duration = 5; 
                     })
 
 local Players = game:GetService("Players")
 local playur = "zzotac"
 local gang = game.Players.LocalPlayer.Name
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
+local cmds = ".pwa / powerimpact aura | .pwaoff / disable pwa | .pa / punch aura | .paoff / disable pa "
 _G.aura = false
+_G.impact = false
+
 
 	event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".on" then
+			if click.Message == ".pa" then
 			    game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
-                    Text = "Kill aura has been activated";
+                    Text = "Punch aura has been activated";
                     Duration = 5; 
                     })
 				_G.aura = true
@@ -33,11 +36,11 @@ _G.aura = false
 	
 		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".off" then
+			if click.Message == ".paoff" then
 				_G.aura = false
 				                   game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
-                    Text = "Kill aura has been disabled";
+                    Text = "Punch aura has been disabled";
                     Duration = 5; 
                     })
 				
@@ -46,4 +49,57 @@ _G.aura = false
 
 			end
 		end
+		end)
+		
+	event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+		if click.FromSpeaker == playur then
+			if click.Message == ".pwa" then
+			    game.StarterGui:SetCore("SendNotification", {
+                    Title = "Kill aura"; 
+                    Text = "Power impact aura has been activated";
+                    Duration = 5; 
+                    })
+				_G.impact = true
+				repeat wait(1)
+				    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/impa'))()
+				until _G.impact == false
+				 
+                    
+
+				
+
+			end
+		end
 	end)
+	
+		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+		if click.FromSpeaker == playur then
+			if click.Message == ".pwaoff" then
+				_G.impact = false
+				                   game.StarterGui:SetCore("SendNotification", {
+                    Title = "Kill aura"; 
+                    Text = "Power impact aura has been disabled";
+                    Duration = 5; 
+                    })
+				
+				    
+				
+
+			end
+		end
+		end)
+		
+		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
+		if click.FromSpeaker == playur then
+			if click.Message == ".print" then
+			    print(cmds)
+
+				
+				    
+				
+
+			end
+		end
+		end)
+
+
