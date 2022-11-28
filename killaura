@@ -1,6 +1,6 @@
                    game.StarterGui:SetCore("SendNotification", {
                     Title = "Made by zzotac"; 
-                    Text = ".print to see the commands.";
+                    Text = "!print to see the commands.";
                     Duration = 5; 
                     })
 
@@ -8,14 +8,14 @@ local Players = game:GetService("Players")
 local playur = "zzotac"
 local gang = game.Players.LocalPlayer.Name
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
-local cmds = ".pwa / powerimpact aura | .pwaoff / disable pwa | .pa / punch aura | .paoff / disable pa "
+local cmds = "!pw / powerimpact aura | !pwo / disable pwa | !pa / punch aura | !pao / disable pa "
 _G.aura = false
 _G.impact = false
 
 
 	event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".pa" then
+			if click.Message == "!pa" then
 			    game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
                     Text = "Punch aura has been activated";
@@ -36,7 +36,7 @@ _G.impact = false
 	
 		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".paoff" then
+			if click.Message == "!pao" then
 				_G.aura = false
 				                   game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
@@ -53,7 +53,7 @@ _G.impact = false
 		
 	event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".pwa" then
+			if click.Message == "!pw" then
 			    game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
                     Text = "Power impact aura has been activated";
@@ -74,7 +74,7 @@ _G.impact = false
 	
 		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".pwaoff" then
+			if click.Message == "!pwo" then
 				_G.impact = false
 				                   game.StarterGui:SetCore("SendNotification", {
                     Title = "Kill aura"; 
@@ -91,7 +91,7 @@ _G.impact = false
 		
 		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == ".print" then
+			if click.Message == "!cmds" then
 			    print(cmds)
 
 				
