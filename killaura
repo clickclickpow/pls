@@ -1,6 +1,6 @@
                    game.StarterGui:SetCore("SendNotification", {
                     Title = "Made by zzotac"; 
-                    Text = "!print to see the commands.";
+                    Text = "!cmd to see the commands.";
                     Duration = 5; 
                     })
 
@@ -8,7 +8,7 @@ local Players = game:GetService("Players")
 local playur = "zzotac"
 local gang = game.Players.LocalPlayer.Name
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
-local cmds = "!pw / powerimpact aura | !pwo / disable pwa | !pa / punch aura | !pao / disable pa "
+local cmds = "!pw / powerimpact aura | !pwo / disable pwa | !pa / punch aura | !pao / disable pa"
 _G.aura = false
 _G.impact = false
 
@@ -24,6 +24,7 @@ _G.impact = false
 				_G.aura = true
 				repeat wait()
 				    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/killaura'))()
+				    
 				until _G.aura == false
 				 
                     
@@ -62,6 +63,7 @@ _G.impact = false
 				_G.impact = true
 				repeat wait(1)
 				    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/impa'))()
+				    
 				until _G.impact == false
 				 
                     
@@ -91,7 +93,7 @@ _G.impact = false
 		
 		event.OnMessageDoneFiltering.OnClientEvent:Connect(function(click)
 		if click.FromSpeaker == playur then
-			if click.Message == "!cmds" then
+			if click.Message == "!cmd" then
 			    print(cmds)
 
 				
