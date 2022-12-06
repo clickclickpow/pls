@@ -28,5 +28,5 @@ game.StarterGui:SetCore("SendNotification", {
     Duration = 5; 
     })
 else
-    game.Players.LocalPlayer:kick("whitelistnt")
+    game.Players.LocalPlayer:kick("NOOOOOOO")
 end
