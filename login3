@@ -2,7 +2,6 @@ local admins = {"ggerz2"}
 local ownas = {"zzotac"}
 local co = {"Mihajlo42Savic"}
 local blacklist = {"Gulfungle" , "GxdBreaker", "deadvou"}
-local check = {"Mihajlo42Savic", "zzotac", "Nabz_121", "Nabz_141", "PRINCEVOU", "ggerz2"}
 local p1 = {"DAEDVOU" , "Gulfungle"}
 local p2 = {"Nabz_121" , "Nabz_141"}
 local p3 = {"PRINCEVOU"}
@@ -34,16 +33,6 @@ end
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/plss'))()
 end
 
-if table.find(check,grrtbow) then
-    
-    else
-        wait()
-    game.StarterGui:SetCore("SendNotification", {
-    Title = "Not"; 
-    Text = "Whitelisted";
-    Duration = 5; 
-    })
-end
 
 
 if table.find(blacklist,grrtbow) then
