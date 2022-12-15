@@ -20,7 +20,7 @@ local Dbx = Win:Tab("Dbz") -- This Creates a Tab on the left Side
 
 local tp = Win:Tab("Teleports") -- This Creates a Tab on the left Side
 
-local Attack = Win:Tab("Attacks") -- This Creates a Tab on the left Side
+local = Win:Tab("Attacks") -- This Creates a Tab on the left Side
 
 local Formss = Win:Tab("Instant Forms") -- This Creates a Tab on the left Side
 
@@ -1976,6 +1976,18 @@ end)
 Guis:Button("Power lvl", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/sto'))()
 end)
+
+if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" then
+Attack:Button("Kill aura", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killaura'))()
+end)
+end
+
+if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" then
+Attack:Button("Pw or slash near", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/nearrr'))()
+end)
+end
 
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
