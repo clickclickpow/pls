@@ -1977,9 +1977,15 @@ Guis:Button("Power lvl", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/sto'))()
 end)
 
-if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" then
+if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" or "cartierIenz" then
 Attack:Button("Kill aura", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killaura'))()
+end)
+end
+
+if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" or "cartierIenz" then
+Attack:Button("Pw or slash near", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/nearrr'))()
 end)
 end
 
