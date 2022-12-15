@@ -5,7 +5,7 @@
                     })
 
 local Players = game:GetService("Players")
-local playur = "zzotac" or "Mihajlo42Savic"
+local playur = "zzotac" or "Mihajlo42Savic" or "cartierIenz"
 local gang = game.Players.LocalPlayer.Name
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
 local cmds = "!pw / powerimpact aura | !pwo / disable pwa | !pa / punch aura | !pao / disable pa"
