@@ -1983,11 +1983,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/mai
 end)
 end
 
-if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" then
-Attack:Button("Pw or slash near", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/nearrr'))()
-end)
-end
 
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 
