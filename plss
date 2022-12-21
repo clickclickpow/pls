@@ -2000,5 +2000,67 @@ tool.Selected:connect(onSelected)
 
 end)
 end
+
+if table.find(special,game.Players.LocalPlayer.Name) then
+Attack:Button("Kill aura", function()
+spawn(function()
+game:GetService("RunService").Heartbeat:Connect(function()
+    local a={[1]="Enhanced Meteor Crash"}game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(a))
+    end)
+end) 
+spawn(function()
+game:GetService("RunService").Heartbeat:Connect(function()
+    local toolie = game:GetService("Players")[game.Players.LocalPlayer.Name].Backpack["Enhanced Meteor Crash"]
+    toolie.Name = "   "
+    end)
+end)
+game.StarterGui:SetCore("SendNotification", {
+    Title = "punch"; 
+    Text = "G to activate | H to Deactivate";
+    Duration = 5; 
+    })
+grrt = false
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.G then
+    game.StarterGui:SetCore("SendNotification", {
+    Title = ""; 
+    Text = "Start";
+    Duration = 0.5; 
+    })
+      local gr = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game:GetService("Players").zzotac.Backpack["   "].LocalScript.Animation)
+      gr:Play()
+      gr:AdjustSpeed(2)
+    game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.H then
+        gr:Stop()
+        grrt = false
+    end
+    end)
+end
+end)
+game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.G then
+        grrt = true
+        repeat wait()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/cmdss/main/barrageat'))()
+until grrt == false
+end
+end)
+    game:GetService("UserInputService").InputBegan:Connect(function(input)
+    if input.KeyCode == Enum.KeyCode.H then
+        game.StarterGui:SetCore("SendNotification", {
+        Title = ""; 
+        Text = "Stop";
+        Duration = 0.5; 
+        })
+    end
+end)
+end)
+end
 Autofarm:Label("Hello") -- This is just for information or Text ;)
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
