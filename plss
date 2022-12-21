@@ -2003,6 +2003,19 @@ end
 
 if table.find(special,game.Players.LocalPlayer.Name) then
 Attack:Button("Kill aura", function()
+function re()
+    local ts = game:GetService("TeleportService")
+    local p = game:GetService("Players").LocalPlayer
+    ts:Teleport(game.PlaceId, p)
+    end
+
+for i, v in next, game:GetService("Players").LocalPlayer.Backpack:GetChildren() do
+	if v.Name:find("   ") then
+	    print("found")
+		re()
+		end
+    end
+
 spawn(function()
 game:GetService("RunService").Heartbeat:Connect(function()
     local a={[1]="Enhanced Meteor Crash"}game:GetService("ReplicatedStorage").Events.giveskill:FireServer(unpack(a))
