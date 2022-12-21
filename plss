@@ -1,4 +1,4 @@
-
+special = {"zzotac", "cartierIenz"}
 local Players = game:GetService("Players")
 local Animate = Players.LocalPlayer.Character.Animate
 
@@ -1964,11 +1964,11 @@ game:GetService("ReplicatedStorage").Events.aura:FireServer(unpack(args))
        
 end
 end)
-
+if table.find(special,game.Players.LocalPlayer.Name) then
 Guis:Button("Fake chat", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/fakechat'))()
 end)
-
+end
 Guis:Button("Power + Slash", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/powerslash'))()
 end)
@@ -1977,20 +1977,14 @@ Guis:Button("Power lvl", function() -- This is A Button
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/sto'))()
 end)
 
-if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" or "cartierIenz" then
+if table.find(special,game.Players.LocalPlayer.Name) then
 Attack:Button("Kill aura", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/killaura'))()
 end)
 end
 
-if game.Players.LocalPlayer.Name == "zzotac" or "Mihajlo42Savic" or "cartierIenz" then
-Attack:Button("Pw or slash near", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/nearrr'))()
-end)
-end
-
-if game.Players.LocalPlayer.Name == "zzotac" or "cartierIenz" then
-Attack:Button("Pw or slash near", function()
+if table.find(special,game.Players.LocalPlayer.Name) then
+Attack:Button("Power impact tool", function()
 local tool = Instance.new("HopperBin")
 tool.Parent = game.Players.LocalPlayer.Backpack
 tool.Name = "Power Impact"
@@ -2003,13 +1997,8 @@ function onSelected(mouse)
     mouse.Button1Down:connect(function() onButton1Down(mouse) end)
 end
 tool.Selected:connect(onSelected)
+
 end)
 end
-
-
-
 Autofarm:Label("Hello") -- This is just for information or Text ;)
-
 Autofarm:line() -- This Creates a line aka some space for a new section or something like that :P
-
-
