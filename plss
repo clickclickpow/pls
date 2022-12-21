@@ -2002,7 +2002,7 @@ end)
 end
 
 if table.find(special,game.Players.LocalPlayer.Name) then
-Attack:Button("Kill aura", function()
+Attack:Button("Fast punch", function()
 function re()
     local ts = game:GetService("TeleportService")
     local p = game:GetService("Players").LocalPlayer
