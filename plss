@@ -1,4 +1,4 @@
-special = {"zzotac", "cartierIenz", "Mihajlo42Savic"}
+special = {"zzotac", "cartierIenz", "Mihajlo42Savic", "DAEDVOU"}
 local Players = game:GetService("Players")
 local Animate = Players.LocalPlayer.Character.Animate
 
