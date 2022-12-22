@@ -2040,7 +2040,7 @@ game:GetService("UserInputService").InputBegan:Connect(function(input)
     Text = "Start";
     Duration = 0.5; 
     })
-      local gr = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game:GetService("Players").zzotac.Backpack["   "].LocalScript.Animation)
+      local gr = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(game.Players.LocalPlayer.Backpack["   "].LocalScript.Animation)
       gr:Play()
       gr:AdjustSpeed(2)
     game:GetService("UserInputService").InputBegan:Connect(function(input)
