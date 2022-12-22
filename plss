@@ -1987,7 +1987,7 @@ if table.find(special,game.Players.LocalPlayer.Name) then
 Attack:Button("Power impact tool", function()
 local tool = Instance.new("HopperBin")
 tool.Parent = game.Players.LocalPlayer.Backpack
-tool.Name = "Power Impact"
+tool.Name = "Power Impact V2"
 function onButton1Down(mouse) task.wait()
 tool.Name = "made by zzotac" wait(0.1)
 tool.Name = "Power Impact"
