@@ -1,0 +1,99 @@
+white = {"Mihajlo42Savic"}
+
+if table.find(white,game.Players.LocalPlayer.Name) then
+spawn(function()
+while not game.Players.localPlayer do
+    wait()
+end
+game:service'RunService'.Heartbeat:Connect(function()
+    game.Players.LocalPlayer.PlayerGui.Start.Full.start.Text = "S"..game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Speed.Value .. "-R" .. game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Rebirth.Value
+end)
+
+Place = 1456080999
+game:GetService("RunService").Stepped:connect(function()
+game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:connect(function(child)
+if child.Name == "ErrorPrompt" and child:FindFirstChild("MessageArea") and child.MessageArea:FindFirstChild("ErrorFrame") then
+game:GetService("TeleportService"):Teleport(Place)
+end
+end)
+end)
+ok = true
+if game.PlaceId == 1456080999 then
+    repeat 
+        wait() 
+    until game:IsLoaded() and game.Players.LocalPlayer
+    if ok == true then
+        game:service'Players'.LocalPlayer.CharacterAdded:Connect(function()
+            
+        end)
+        game:service'RunService'.Heartbeat:Connect(function()
+            game:GetService("ReplicatedStorage").Events.giveskill:FireServer("Energy Wave")
+            game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Energy Wave").Parent = game.Players.LocalPlayer.Character
+        end)
+        CanRun1 = true
+        game:GetService("ReplicatedStorage").Datas[game.Players.LocalPlayer.Name].Speed.Changed:Connect(function(Val)
+            if Val > 499 and CanRun1 == true then
+                CanRun1 = false
+                game:GetService("ReplicatedStorage").Events.re:InvokeServer()
+                game.ReplicatedStorage.Events.save:FireServer()
+                wait(5)
+                CanRun1 = true
+            end
+            print(Val)
+        end)
+        wait()
+        game:service'RunService'.Heartbeat:Connect(function()
+lplr = game.Players.LocalPlayer.Name
+game:GetService("Workspace")[lplr].HumanoidRootPart:WaitForChild("Charge"):remove()
+game:GetService("Workspace")[lplr].UpperTorso:WaitForChild("Waist"):remove()
+game:GetService("Workspace")[lplr].LowerTorso:WaitForChild("Root"):remove()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2763, 4861, -2798) 
+            game.ReplicatedStorage.Events.lvl:FireServer(game.ReplicatedStorage.Datas[game.Players.LocalPlayer.Name].Speed)
+        end)
+        game:service'RunService'.Heartbeat:Connect(function()
+        game:GetService("ReplicatedStorage").Events.charge:FireServer(game.Players.LocalPlayer.Character.HumanoidRootPart, true)
+        end)
+        game:service'RunService'.Heartbeat:Connect(function()
+            local ohBoolean1 = true
+            local ohInstance2 = game.Players.LocalPlayer.Character.Effects
+            local ohVector33 = Vector3.new(-2686, 4861, -2759)
+            local ohInstance4 = game.Players.LocalPlayer.Character.RightHand
+            game:GetService("ReplicatedStorage").Events.blast:FireServer(ohBoolean1, ohInstance2, ohVector33, ohInstance4)
+        end)
+        wait(2)
+        waittime = .25
+        while true do
+            wait(waittime)
+            game:GetService("ReplicatedStorage").Events.beam:FireServer(true,"Energy Wave","Red",3,Vector3.new(78.03720092773438, 4938.62646484375, -1166.8460693359375),.02,30,game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy Wave"),6,8,40,1)
+            wait(waittime)
+            game:GetService("ReplicatedStorage").Events.beam:FireServer(true,"Energy Wave","Red",3,Vector3.new(78.03720092773438, 4938.62646484375, -1166.8460693359375),.02,30,game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy Wave"),6,8,40,1)
+            wait(waittime)
+            game:GetService("ReplicatedStorage").Events.beam:FireServer(true,"Energy Wave","Red",3,Vector3.new(78.03720092773438, 4938.62646484375, -1166.8460693359375),.02,30,game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy Wave"),6,8,40,1)
+            wait(waittime)
+            game:GetService("ReplicatedStorage").Events.beam:FireServer(true,"Energy Wave","Red",3,Vector3.new(78.03720092773438, 4938.62646484375, -1166.8460693359375),.02,30,game:GetService("Players").LocalPlayer.Character:FindFirstChild("Energy Wave"),6,8,40,1)
+        end
+    else
+        script:Destroy()
+    end
+else
+    game:service'RunService'.Heartbeat:Connect(function()
+        game:service'TeleportService':Teleport(1456080999)
+    end)
+end 
+end)
+
+
+spawn(function()
+game:service'RunService'.Heartbeat:Connect(function() wait(5)
+    game:getService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2763, 4861, -2798)
+end)
+end)
+spawn(function()
+    local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+   wait(1)
+   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+end)
+end
